@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "home": "Start",
+    "experience": "Erlebnis",
+    "packages": "Pakete",
+    "programs": "Kurse",
+    "about": "Über uns",
+    "book": "Buchen",
+    "bookNow": "Jetzt buchen"
+  },
+  "cta": {
+    "seePackages": "Pakete ansehen",
+    "whatsappUs": "WhatsApp",
+    "whatsappNow": "Jetzt per WhatsApp",
+    "bookYourWeek": "Woche buchen",
+    "joinTheCrew": "Werde Teil der Crew",
+    "viewPrograms": "Kurse ansehen",
+    "exploreExperience": "Erlebnis entdecken",
+    "viewPackages": "Pakete ansehen",
+    "policies": "Gäste-Richtlinien",
+    "moreInfo": "Mehr Infos — Kontaktiere uns"
+  },
+  "common": {
+    "from": "ab",
+    "perPerson": "pro Person",
+    "perWeek": "pro Woche",
+    "included": "Inklusive",
+    "notIncluded": "Nicht inklusive",
+    "addOns": "Extras",
+    "partnerPrice": "Partnerpreis",
+    "mostPopular": "Am beliebtesten",
+    "bestExperience": "Bestes Erlebnis",
+    "private": "Privat",
+    "group": "Gruppe",
+    "duration": "Dauer",
+    "level": "Level",
+    "loading": "Lädt…"
+  },
+  "home": {
+    "eyebrow": "Hurghada · Rotes Meer · Ägypten",
+    "title": "DAS ROTE MEER RUFT. BIST DU DABEI?",
+    "sub": "Eine Woche. Eine Crew. Ein Erlebnis, von dem du nie aufhörst zu erzählen.",
+    "statementQuote": "Kite Pirates ist keine Kiteschule. Es ist eine Crew. Wir reiten das Rote Meer, entdecken versteckte Lagunen, die keine Karte zeigt, essen zusammen und pushen uns gegenseitig auf dem Wasser. Ob du zum ersten Mal einen Kite anfasst oder deinen nächsten Trick jagst — hier gehörst du dazu. Das ist Hurghada, wie es die Einheimischen leben. Wild, warm, völlig frei.",
+    "experienceTitle": "MEHR ALS KITEN",
+    "experienceSub": "Das Wasser ist erst der Anfang.",
+    "packagesTitle": "WÄHLE DEINE WOCHE",
+    "packagesSub": "Drei Arten zu reiten. Eine Crew.",
+    "programsTitle": "ODER KOMM FÜR EINEN TAG",
+    "programsSub": "Einzelkurse und Erlebnisse.",
+    "programsKite": "Kitekurse",
+    "programsWing": "Wing Foil",
+    "programsDay": "Tageserlebnisse",
+    "scarcityTitle": "BEGRENZT AUF 10 PIRATEN PRO WOCHE.",
+    "scarcitySub": "Die Hauptsaison füllt sich schnell. Verpass deinen Platz auf dem Wasser nicht."
+  },
+  "experience": {
+    "title": "DAS IST KEIN URLAUB. DAS IST EIN ABENTEUER.",
+    "dayTitle": "EIN TAG ALS PIRAT",
+    "noWindTitle": "KEIN WIND? KEIN PROBLEM.",
+    "noWindNote": "Plus teilweise Barerstattung oder Gutschrift für verlorene Kite-Zeit."
+  },
+  "packages": {
+    "title": "ALL-INCLUSIVE PIRATEN-WOCHEN",
+    "sub": "Unterkunft, Essen, Transport, Riding und Erlebnisse — alles geregelt.",
+    "compareTitle": "JEDE WOCHE VERGLEICHEN",
+    "discountsTitle": "ZUSAMMEN REITEN, ZUSAMMEN SPAREN"
+  },
+  "programs": {
+    "title": "KURSE & TAGESERLEBNISSE",
+    "sub": "Komm für eine Session. Bleib für das Rote Meer.",
+    "kiteTitle": "KITEKURSE",
+    "wingTitle": "WING-FOIL-KURSE",
+    "experiencesTitle": "EINZELERLEBNISSE"
+  },
+  "about": {
+    "title": "WIR SIND KEINE KITESCHULE. WIR SIND EINE CREW.",
+    "sub": "Am Roten Meer geboren. Für alle, die für den Wind leben.",
+    "storyTitle": "UNSERE GESCHICHTE",
+    "valuesTitle": "WOFÜR WIR REITEN",
+    "crewTitle": "DIE CREW",
+    "promiseTitle": "UNSER VERSPRECHEN",
+    "promise": "Wir lassen niemanden zurück. Unsere Instruktoren sind in Erster Hilfe geschult und an deiner Seite — von der ersten bis zur letzten Session. In diesem Moment bist du kein Kunde. Du bist Crew."
+  },
+  "book": {
+    "title": "SICHERE DIR DEINEN PLATZ",
+    "sub": "30% Anzahlung sichert deine Woche. Wir antworten innerhalb von 24 Stunden.",
+    "flowTitle": "SO FUNKTIONIERT DIE BUCHUNG",
+    "formTitle": "SENDE DEINE ANFRAGE",
+    "faqTitle": "FRAGEN VOR DEM ABLEGEN",
+    "cancellationTitle": "STORNIERUNGSBEDINGUNGEN",
+    "noWindTitle": "RÜCKERSTATTUNG BEI KEIN WIND",
+    "channelsTitle": "SPRICH MIT UNS",
+    "success": "Wir melden uns innerhalb von 24 Stunden. Willkommen an Bord.",
+    "error": "Beim Senden ist etwas schiefgelaufen. Bitte kontaktiere uns direkt per WhatsApp oder E-Mail.",
+    "submitting": "Senden…",
+    "submit": "Buchungsanfrage senden",
+    "consent": "Ich stimme zu, dass Kite Pirates die obigen Angaben nutzt, um meine Anfrage zu beantworten.",
+    "consentRequired": "Bitte bestätige die Zustimmung, damit wir antworten können."
+  },
+  "form": {
+    "fullName": "Vollständiger Name",
+    "email": "E-Mail",
+    "whatsapp": "WhatsApp / Telefon",
+    "nationality": "Nationalität",
+    "language": "Bevorzugte Sprache",
+    "bookingType": "Buchungsart",
+    "package": "Paket / Erlebnis",
+    "arrivalDate": "Bevorzugtes Ankunftsdatum",
+    "guests": "Anzahl der Gäste",
+    "experienceLevel": "Kite-Erfahrungslevel",
+    "ownEquipment": "Eigene Ausrüstung dabei",
+    "medical": "Verletzungen / Medizinisches (Optional)",
+    "referral": "Wie hast du von uns erfahren?",
+    "message": "Nachricht / Sonderwünsche (Optional)",
+    "required": "Dieses Feld ist erforderlich",
+    "invalidEmail": "Gib eine gültige E-Mail-Adresse ein",
+    "invalidPhone": "Gib eine gültige Telefonnummer ein",
+    "tooLong": "Das ist zu lang"
+  },
+  "footer": {
+    "tagline": "Am Roten Meer geboren. Für den Wind gemacht.",
+    "explore": "Entdecken",
+    "connect": "Verbinden",
+    "language": "Sprache",
+    "rights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "madeWith": "Zusammen segeln. Zusammen ablegen."
+  },
+  "cookie": {
+    "message": "Wir verwenden Cookies nur für anonyme Analysen, um die Seite zu verbessern. Nichts wird geladen, bevor du wählst.",
+    "accept": "Analyse akzeptieren",
+    "decline": "Ablehnen",
+    "learn": "Datenschutz"
+  },
+  "whatsapp": {
+    "aria": "Mit Kite Pirates über WhatsApp chatten",
+    "prefill": "Hallo Kite Pirates, ich möchte eine Woche buchen"
+  },
+  "wind": {
+    "live": "Live",
+    "wind": "Wind",
+    "gusts": "Böen",
+    "conditions": "Bedingungen",
+    "best": "Bestes Fenster",
+    "today": "Heute",
+    "loading": "Lädt…",
+    "offline": "Live-Wind derzeit nicht verfügbar.",
+    "source": "Quelle"
+  },
+  "notFound": {
+    "title": "VON DER KARTE",
+    "sub": "Diese Seite ist aufs Meer hinausgetrieben. Zurück zur Crew.",
+    "home": "Zurück zur Startseite"
+  }
+}

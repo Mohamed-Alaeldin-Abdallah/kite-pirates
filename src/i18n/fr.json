@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "experience": "Expérience",
+    "packages": "Forfaits",
+    "programs": "Cours",
+    "about": "À propos",
+    "book": "Réserver",
+    "bookNow": "Réserver"
+  },
+  "cta": {
+    "seePackages": "Voir les forfaits",
+    "whatsappUs": "WhatsApp",
+    "whatsappNow": "WhatsApp maintenant",
+    "bookYourWeek": "Réserve ta semaine",
+    "joinTheCrew": "Rejoins l'équipage",
+    "viewPrograms": "Voir les cours",
+    "exploreExperience": "Découvrir l'expérience",
+    "viewPackages": "Voir les forfaits",
+    "policies": "Conditions clients",
+    "moreInfo": "Plus d'infos — Contacte-nous"
+  },
+  "common": {
+    "from": "à partir de",
+    "perPerson": "par personne",
+    "perWeek": "par semaine",
+    "included": "Inclus",
+    "notIncluded": "Non inclus",
+    "addOns": "Options",
+    "partnerPrice": "Prix partenaire",
+    "mostPopular": "Le plus populaire",
+    "bestExperience": "Meilleure expérience",
+    "private": "Privé",
+    "group": "Groupe",
+    "duration": "Durée",
+    "level": "Niveau",
+    "loading": "Chargement…"
+  },
+  "home": {
+    "eyebrow": "Hurghada · Mer Rouge · Égypte",
+    "title": "LA MER ROUGE T'APPELLE. TU EN ES ?",
+    "sub": "Une semaine. Un équipage. Une expérience dont tu ne cesseras de parler.",
+    "statementQuote": "Kite Pirates n'est pas une école de kite. C'est un équipage. On surfe la Mer Rouge, on découvre des lagons cachés que la carte ne montre pas, on mange ensemble et on se pousse mutuellement sur l'eau. Que tu touches un kite pour la première fois ou que tu cherches ton prochain trick — ta place est ici. C'est Hurghada comme la vivent les locaux. Sauvage, chaleureuse, totalement libre.",
+    "experienceTitle": "BIEN PLUS QUE LE KITE",
+    "experienceSub": "L'eau n'est que le début.",
+    "packagesTitle": "CHOISIS TA SEMAINE",
+    "packagesSub": "Trois façons de rider. Un seul équipage.",
+    "programsTitle": "OU VIENS POUR UNE JOURNÉE",
+    "programsSub": "Cours et expériences à la carte.",
+    "programsKite": "Cours de kite",
+    "programsWing": "Wing Foil",
+    "programsDay": "Expériences à la journée",
+    "scarcityTitle": "LIMITÉ À 10 PIRATES PAR SEMAINE.",
+    "scarcitySub": "La haute saison se remplit vite. Ne rate pas ta place sur l'eau."
+  },
+  "experience": {
+    "title": "CE N'EST PAS DES VACANCES. C'EST UNE AVENTURE.",
+    "dayTitle": "UNE JOURNÉE DE PIRATE",
+    "noWindTitle": "PAS DE VENT ? PAS DE PROBLÈME.",
+    "noWindNote": "Plus un remboursement partiel en espèces ou un avoir pour toute session de kite perdue."
+  },
+  "packages": {
+    "title": "SEMAINES PIRATES TOUT COMPRIS",
+    "sub": "Hébergement, repas, transport, riding et expériences — tout est géré.",
+    "compareTitle": "COMPARER CHAQUE SEMAINE",
+    "discountsTitle": "RIDER ENSEMBLE, ÉCONOMISER ENSEMBLE"
+  },
+  "programs": {
+    "title": "COURS & EXPÉRIENCES À LA JOURNÉE",
+    "sub": "Viens pour une session. Reste pour la Mer Rouge.",
+    "kiteTitle": "COURS DE KITE",
+    "wingTitle": "COURS DE WING FOIL",
+    "experiencesTitle": "EXPÉRIENCES À LA CARTE"
+  },
+  "about": {
+    "title": "NOUS NE SOMMES PAS UNE ÉCOLE DE KITE. NOUS SOMMES UN ÉQUIPAGE.",
+    "sub": "Nés sur la Mer Rouge. Faits pour ceux qui vivent pour le vent.",
+    "storyTitle": "NOTRE HISTOIRE",
+    "valuesTitle": "CE POUR QUOI ON RIDE",
+    "crewTitle": "L'ÉQUIPAGE",
+    "promiseTitle": "NOTRE PROMESSE",
+    "promise": "On ne laisse jamais personne derrière. Nos moniteurs sont formés aux premiers secours et restent à tes côtés de la première à la dernière session. À ce moment-là, tu n'es pas un client. Tu fais partie de l'équipage."
+  },
+  "book": {
+    "title": "RÉSERVE TA PLACE",
+    "sub": "Un acompte de 30 % sécurise ta semaine. On répond sous 24 heures.",
+    "flowTitle": "COMMENT RÉSERVER",
+    "formTitle": "ENVOIE TA DEMANDE",
+    "faqTitle": "QUESTIONS AVANT DE LARGUER LES AMARRES",
+    "cancellationTitle": "CONDITIONS D'ANNULATION",
+    "noWindTitle": "REMBOURSEMENT SANS VENT",
+    "channelsTitle": "PARLE-NOUS",
+    "success": "On te recontacte sous 24 heures. Bienvenue à bord.",
+    "error": "Un problème est survenu lors de l'envoi. Contacte-nous directement par WhatsApp ou e-mail.",
+    "submitting": "Envoi…",
+    "submit": "Envoyer la demande",
+    "consent": "J'accepte que Kite Pirates utilise les informations ci-dessus pour répondre à ma demande.",
+    "consentRequired": "Merci de confirmer ton consentement pour qu'on puisse te répondre."
+  },
+  "form": {
+    "fullName": "Nom complet",
+    "email": "E-mail",
+    "whatsapp": "WhatsApp / Téléphone",
+    "nationality": "Nationalité",
+    "language": "Langue préférée",
+    "bookingType": "Type de réservation",
+    "package": "Forfait / Expérience",
+    "arrivalDate": "Date d'arrivée souhaitée",
+    "guests": "Nombre d'invités",
+    "experienceLevel": "Niveau d'expérience en kite",
+    "ownEquipment": "J'apporte mon matériel",
+    "medical": "Blessures / Médical (Facultatif)",
+    "referral": "Comment nous as-tu connus ?",
+    "message": "Message / Demandes spéciales (Facultatif)",
+    "required": "Ce champ est obligatoire",
+    "invalidEmail": "Saisis une adresse e-mail valide",
+    "invalidPhone": "Saisis un numéro de téléphone valide",
+    "tooLong": "C'est trop long"
+  },
+  "footer": {
+    "tagline": "Né sur la Mer Rouge. Fait pour le vent.",
+    "explore": "Explorer",
+    "connect": "Suivre",
+    "language": "Langue",
+    "rights": "Tous droits réservés.",
+    "privacy": "Confidentialité",
+    "madeWith": "Naviguer ensemble. Larguer les amarres ensemble."
+  },
+  "cookie": {
+    "message": "Nous utilisons les cookies uniquement pour des analyses anonymes afin d'améliorer le site. Rien ne se charge avant ton choix.",
+    "accept": "Accepter l'analyse",
+    "decline": "Refuser",
+    "learn": "Confidentialité"
+  },
+  "whatsapp": {
+    "aria": "Discuter avec Kite Pirates sur WhatsApp",
+    "prefill": "Bonjour Kite Pirates, je souhaite réserver une semaine"
+  },
+  "wind": {
+    "live": "En direct",
+    "wind": "Vent",
+    "gusts": "Rafales",
+    "conditions": "Conditions",
+    "best": "Meilleur créneau",
+    "today": "Aujourd'hui",
+    "loading": "Chargement…",
+    "offline": "Vent en direct indisponible pour le moment.",
+    "source": "Source"
+  },
+  "notFound": {
+    "title": "HORS DE LA CARTE",
+    "sub": "Cette page a dérivé vers le large. Retournons vers l'équipage.",
+    "home": "Retour à l'accueil"
+  }
+}

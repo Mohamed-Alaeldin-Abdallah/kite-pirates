@@ -1,0 +1,157 @@
+@import './styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    color: var(--color-white);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* Sky-to-sea base wash behind all sections */
+    background-color: var(--color-dark);
+    background-image: radial-gradient(
+        ellipse at 50% -10%,
+        rgba(95, 227, 218, 0.08),
+        transparent 55%
+      ),
+      var(--grad-sky-sea);
+    background-attachment: fixed;
+  }
+
+  /* Arabic: switch the whole UI to Cairo and render RTL cleanly. */
+  [lang='ar'],
+  [dir='rtl'] {
+    font-family: var(--font-arabic);
+  }
+  [lang='ar'] .font-display,
+  [dir='rtl'] .font-display {
+    font-family: var(--font-arabic);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+  [lang='ar'] .font-accent,
+  [dir='rtl'] .font-accent {
+    font-family: var(--font-arabic);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
+    line-height: 0.92;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-teal);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  [id] {
+    scroll-margin-top: calc(var(--nav-height) + 16px);
+  }
+
+  ::selection {
+    background: var(--color-teal);
+    color: var(--color-dark);
+  }
+}
+
+@layer components {
+  .section {
+    padding-block: clamp(56px, 8vw, 112px);
+  }
+  .container-px {
+    padding-inline: clamp(20px, 5vw, 48px);
+  }
+
+  .ghost-watermark {
+    font-family: var(--font-display);
+    color: var(--color-white);
+    opacity: 0.05;
+    line-height: 0.8;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  /* Film grain / sand texture */
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  /* Splash / ripple hover for buttons & cards. A sea-foam ring expands
+     from the centre on hover. Purely decorative, GPU-friendly. */
+  .splash {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .splash::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(234, 251, 248, 0.35), transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s var(--ease-brand), height 0.5s var(--ease-brand), opacity 0.6s ease;
+    opacity: 0;
+    z-index: -1;
+  }
+  .splash:hover::after,
+  .splash:focus-visible::after {
+    width: 320px;
+    height: 320px;
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  /* Mirror directional decorative elements for Arabic */
+  [dir='rtl'] .flip-rtl {
+    transform: scaleX(-1);
+  }
+}
+
+/* Skip link — hidden until focused */
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -64px;
+  z-index: 100;
+  background: var(--color-teal);
+  color: var(--color-dark);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: top var(--dur-fast) ease;
+}
+.skip-link:focus {
+  top: 12px;
+}

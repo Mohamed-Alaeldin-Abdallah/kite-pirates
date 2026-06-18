@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "packages": "Packages",
+    "programs": "Courses",
+    "about": "About",
+    "book": "Book",
+    "bookNow": "Book Now"
+  },
+  "cta": {
+    "seePackages": "See Packages",
+    "whatsappUs": "WhatsApp Us",
+    "whatsappNow": "WhatsApp Us Now",
+    "bookYourWeek": "Book Your Week",
+    "joinTheCrew": "Join The Crew",
+    "viewPrograms": "View Programs",
+    "exploreExperience": "Explore The Experience",
+    "viewPackages": "View Packages",
+    "policies": "Guest Policies",
+    "moreInfo": "For more info — Contact us"
+  },
+  "common": {
+    "from": "from",
+    "perPerson": "per person",
+    "perWeek": "per week",
+    "included": "Included",
+    "notIncluded": "Not included",
+    "addOns": "Add-ons",
+    "partnerPrice": "Partner price",
+    "mostPopular": "Most Popular",
+    "bestExperience": "Best Experience",
+    "private": "Private",
+    "group": "Group",
+    "duration": "Duration",
+    "level": "Level",
+    "loading": "Loading…"
+  },
+  "home": {
+    "eyebrow": "Hurghada · Red Sea · Egypt",
+    "title": "THE RED SEA IS CALLING. ARE YOU IN?",
+    "sub": "One week. One crew. One experience you'll never stop talking about.",
+    "statementQuote": "Kite Pirates isn't a kite school. It's a crew. We ride the Red Sea, discover hidden lagoons the map doesn't show, eat together, and push each other on the water. Whether you're touching a kite for the first time or hunting your next trick — you belong here. This is Hurghada the way locals live it. Wild, warm, completely free.",
+    "experienceTitle": "MORE THAN KITING",
+    "experienceSub": "The water is only the beginning.",
+    "packagesTitle": "PICK YOUR WEEK",
+    "packagesSub": "Three ways to ride. One crew.",
+    "programsTitle": "OR COME FOR A DAY",
+    "programsSub": "Standalone courses and experiences.",
+    "programsKite": "Kite Courses",
+    "programsWing": "Wing Foil",
+    "programsDay": "Day Experiences",
+    "scarcityTitle": "LIMITED TO 10 PIRATES PER WEEK.",
+    "scarcitySub": "Peak season fills fast. Don't miss your spot on the water."
+  },
+  "experience": {
+    "title": "THIS ISN'T A HOLIDAY. IT'S AN ADVENTURE.",
+    "dayTitle": "A PIRATE'S DAY",
+    "noWindTitle": "NO WIND? NO PROBLEM.",
+    "noWindNote": "Plus partial cash refund or credit for any lost kite session time."
+  },
+  "packages": {
+    "title": "ALL-INCLUSIVE PIRATES WEEKS",
+    "sub": "Stay, food, transport, ride and experiences — handled.",
+    "compareTitle": "COMPARE EVERY WEEK",
+    "discountsTitle": "RIDE TOGETHER, SAVE TOGETHER"
+  },
+  "programs": {
+    "title": "COURSES & DAY EXPERIENCES",
+    "sub": "Come for a session. Stay for the Red Sea.",
+    "kiteTitle": "KITE COURSES",
+    "wingTitle": "WING FOIL COURSES",
+    "experiencesTitle": "STANDALONE EXPERIENCES"
+  },
+  "about": {
+    "title": "WE'RE NOT A KITE SCHOOL. WE'RE A CREW.",
+    "sub": "Born on the Red Sea. Built for those who live for the wind.",
+    "storyTitle": "OUR STORY",
+    "valuesTitle": "WHAT WE RIDE FOR",
+    "crewTitle": "THE CREW",
+    "promiseTitle": "OUR PROMISE",
+    "promise": "We never leave anyone behind. Our instructors are first aid trained and will be by your side from the first session to the last. You're not a customer in that moment. You're crew."
+  },
+  "book": {
+    "title": "CLAIM YOUR SPOT",
+    "sub": "30% deposit secures your week. We reply within 24 hours.",
+    "flowTitle": "HOW BOOKING WORKS",
+    "formTitle": "SEND YOUR REQUEST",
+    "faqTitle": "QUESTIONS BEFORE YOU SAIL",
+    "cancellationTitle": "CANCELLATION POLICY",
+    "noWindTitle": "NO WIND REFUND POLICY",
+    "channelsTitle": "TALK TO US",
+    "success": "We'll get back to you within 24 hours. Welcome aboard.",
+    "error": "Something went wrong sending your request. Please WhatsApp or email us directly.",
+    "submitting": "Sending…",
+    "submit": "Send Booking Request",
+    "consent": "I agree that Kite Pirates may use the details above to respond to my enquiry.",
+    "consentRequired": "Please confirm consent so we can reply to you."
+  },
+  "form": {
+    "fullName": "Full Name",
+    "email": "Email",
+    "whatsapp": "WhatsApp / Phone",
+    "nationality": "Nationality",
+    "language": "Preferred Language",
+    "bookingType": "Booking Type",
+    "package": "Package / Experience",
+    "arrivalDate": "Preferred Arrival Date",
+    "guests": "Number of Guests",
+    "experienceLevel": "Kite Experience Level",
+    "ownEquipment": "Bringing Own Equipment",
+    "medical": "Injuries / Medical (Optional)",
+    "referral": "How did you hear about us?",
+    "message": "Message / Special Requests (Optional)",
+    "required": "This field is required",
+    "invalidEmail": "Enter a valid email address",
+    "invalidPhone": "Enter a valid phone number",
+    "tooLong": "This is too long"
+  },
+  "footer": {
+    "tagline": "Born on the Red Sea. Built for the wind.",
+    "explore": "Explore",
+    "connect": "Connect",
+    "language": "Language",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy",
+    "madeWith": "Sail together. Ship together."
+  },
+  "cookie": {
+    "message": "We use cookies only for anonymous analytics to improve the site. Nothing loads until you choose.",
+    "accept": "Accept analytics",
+    "decline": "Decline",
+    "learn": "Privacy"
+  },
+  "whatsapp": {
+    "aria": "Chat with Kite Pirates on WhatsApp",
+    "prefill": "Hi Kite Pirates, I'd like to book a week"
+  },
+  "wind": {
+    "live": "Live",
+    "wind": "Wind",
+    "gusts": "Gusts",
+    "conditions": "Conditions",
+    "best": "Best Window",
+    "today": "Today",
+    "loading": "Loading…",
+    "offline": "Live wind unavailable right now.",
+    "source": "Source"
+  },
+  "notFound": {
+    "title": "OFF THE MAP",
+    "sub": "This page drifted out to sea. Let's get you back to the crew.",
+    "home": "Back to Home"
+  }
+}

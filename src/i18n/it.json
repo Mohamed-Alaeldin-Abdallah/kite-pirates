@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "home": "Home",
+    "experience": "Esperienza",
+    "packages": "Pacchetti",
+    "programs": "Corsi",
+    "about": "Chi siamo",
+    "book": "Prenota",
+    "bookNow": "Prenota ora"
+  },
+  "cta": {
+    "seePackages": "Vedi i pacchetti",
+    "whatsappUs": "WhatsApp",
+    "whatsappNow": "Scrivici su WhatsApp",
+    "bookYourWeek": "Prenota la tua settimana",
+    "joinTheCrew": "Unisciti all'equipaggio",
+    "viewPrograms": "Vedi i corsi",
+    "exploreExperience": "Scopri l'esperienza",
+    "viewPackages": "Vedi i pacchetti",
+    "policies": "Condizioni per gli ospiti",
+    "moreInfo": "Più info — Contattaci"
+  },
+  "common": {
+    "from": "da",
+    "perPerson": "a persona",
+    "perWeek": "a settimana",
+    "included": "Incluso",
+    "notIncluded": "Non incluso",
+    "addOns": "Extra",
+    "partnerPrice": "Prezzo partner",
+    "mostPopular": "Più richiesto",
+    "bestExperience": "Esperienza migliore",
+    "private": "Privato",
+    "group": "Gruppo",
+    "duration": "Durata",
+    "level": "Livello",
+    "loading": "Caricamento…"
+  },
+  "home": {
+    "eyebrow": "Hurghada · Mar Rosso · Egitto",
+    "title": "IL MAR ROSSO TI CHIAMA. CI SEI?",
+    "sub": "Una settimana. Un equipaggio. Un'esperienza di cui non smetterai mai di parlare.",
+    "statementQuote": "Kite Pirates non è una scuola di kite. È un equipaggio. Cavalchiamo il Mar Rosso, scopriamo lagune nascoste che la mappa non mostra, mangiamo insieme e ci spingiamo a vicenda sull'acqua. Che tu stia toccando un kite per la prima volta o inseguendo il tuo prossimo trick — qui è il tuo posto. Questa è Hurghada come la vivono i locali. Selvaggia, calda, completamente libera.",
+    "experienceTitle": "MOLTO PIÙ DEL KITE",
+    "experienceSub": "L'acqua è solo l'inizio.",
+    "packagesTitle": "SCEGLI LA TUA SETTIMANA",
+    "packagesSub": "Tre modi di cavalcare. Un solo equipaggio.",
+    "programsTitle": "OPPURE VIENI PER UN GIORNO",
+    "programsSub": "Corsi ed esperienze singole.",
+    "programsKite": "Corsi di kite",
+    "programsWing": "Wing Foil",
+    "programsDay": "Esperienze giornaliere",
+    "scarcityTitle": "MASSIMO 10 PIRATI A SETTIMANA.",
+    "scarcitySub": "L'alta stagione si riempie in fretta. Non perdere il tuo posto sull'acqua."
+  },
+  "experience": {
+    "title": "NON È UNA VACANZA. È UN'AVVENTURA.",
+    "dayTitle": "UNA GIORNATA DA PIRATA",
+    "noWindTitle": "NIENTE VENTO? NESSUN PROBLEMA.",
+    "noWindNote": "In più, rimborso parziale in contanti o credito per ogni sessione di kite persa."
+  },
+  "packages": {
+    "title": "SETTIMANE PIRATE TUTTO INCLUSO",
+    "sub": "Alloggio, pasti, trasporti, riding ed esperienze — pensiamo a tutto noi.",
+    "compareTitle": "CONFRONTA OGNI SETTIMANA",
+    "discountsTitle": "CAVALCATE INSIEME, RISPARMIATE INSIEME"
+  },
+  "programs": {
+    "title": "CORSI ED ESPERIENZE GIORNALIERE",
+    "sub": "Vieni per una sessione. Resta per il Mar Rosso.",
+    "kiteTitle": "CORSI DI KITE",
+    "wingTitle": "CORSI DI WING FOIL",
+    "experiencesTitle": "ESPERIENZE SINGOLE"
+  },
+  "about": {
+    "title": "NON SIAMO UNA SCUOLA DI KITE. SIAMO UN EQUIPAGGIO.",
+    "sub": "Nati sul Mar Rosso. Fatti per chi vive per il vento.",
+    "storyTitle": "LA NOSTRA STORIA",
+    "valuesTitle": "PER COSA CAVALCHIAMO",
+    "crewTitle": "L'EQUIPAGGIO",
+    "promiseTitle": "LA NOSTRA PROMESSA",
+    "promise": "Non lasciamo mai indietro nessuno. I nostri istruttori sono formati in primo soccorso e restano al tuo fianco dalla prima all'ultima sessione. In quel momento non sei un cliente. Sei equipaggio."
+  },
+  "book": {
+    "title": "PRENOTA IL TUO POSTO",
+    "sub": "Un acconto del 30% assicura la tua settimana. Rispondiamo entro 24 ore.",
+    "flowTitle": "COME FUNZIONA LA PRENOTAZIONE",
+    "formTitle": "INVIA LA TUA RICHIESTA",
+    "faqTitle": "DOMANDE PRIMA DI SALPARE",
+    "cancellationTitle": "POLITICA DI CANCELLAZIONE",
+    "noWindTitle": "RIMBORSO IN ASSENZA DI VENTO",
+    "channelsTitle": "PARLA CON NOI",
+    "success": "Ti ricontattiamo entro 24 ore. Benvenuto a bordo.",
+    "error": "Qualcosa è andato storto durante l'invio. Contattaci direttamente su WhatsApp o via e-mail.",
+    "submitting": "Invio…",
+    "submit": "Invia richiesta di prenotazione",
+    "consent": "Acconsento che Kite Pirates utilizzi i dati sopra indicati per rispondere alla mia richiesta.",
+    "consentRequired": "Conferma il consenso così possiamo risponderti."
+  },
+  "form": {
+    "fullName": "Nome completo",
+    "email": "E-mail",
+    "whatsapp": "WhatsApp / Telefono",
+    "nationality": "Nazionalità",
+    "language": "Lingua preferita",
+    "bookingType": "Tipo di prenotazione",
+    "package": "Pacchetto / Esperienza",
+    "arrivalDate": "Data di arrivo preferita",
+    "guests": "Numero di ospiti",
+    "experienceLevel": "Livello di esperienza nel kite",
+    "ownEquipment": "Porto la mia attrezzatura",
+    "medical": "Infortuni / Note mediche (Facoltativo)",
+    "referral": "Come ci hai conosciuto?",
+    "message": "Messaggio / Richieste speciali (Facoltativo)",
+    "required": "Questo campo è obbligatorio",
+    "invalidEmail": "Inserisci un indirizzo e-mail valido",
+    "invalidPhone": "Inserisci un numero di telefono valido",
+    "tooLong": "È troppo lungo"
+  },
+  "footer": {
+    "tagline": "Nati sul Mar Rosso. Fatti per il vento.",
+    "explore": "Esplora",
+    "connect": "Seguici",
+    "language": "Lingua",
+    "rights": "Tutti i diritti riservati.",
+    "privacy": "Privacy",
+    "madeWith": "Navighiamo insieme. Salpiamo insieme."
+  },
+  "cookie": {
+    "message": "Usiamo i cookie solo per analisi anonime per migliorare il sito. Nulla viene caricato finché non scegli.",
+    "accept": "Accetta le analisi",
+    "decline": "Rifiuta",
+    "learn": "Privacy"
+  },
+  "whatsapp": {
+    "aria": "Chatta con Kite Pirates su WhatsApp",
+    "prefill": "Ciao Kite Pirates, vorrei prenotare una settimana"
+  },
+  "wind": {
+    "live": "Live",
+    "wind": "Vento",
+    "gusts": "Raffiche",
+    "conditions": "Condizioni",
+    "best": "Finestra migliore",
+    "today": "Oggi",
+    "loading": "Caricamento…",
+    "offline": "Vento in tempo reale non disponibile al momento.",
+    "source": "Fonte"
+  },
+  "notFound": {
+    "title": "FUORI DALLA MAPPA",
+    "sub": "Questa pagina è andata alla deriva. Torniamo all'equipaggio.",
+    "home": "Torna alla home"
+  }
+}
