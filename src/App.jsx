@@ -25,7 +25,7 @@ const PAGES = [
   { path: '', element: <Home /> },
   { path: 'experience', element: <Experience /> },
   { path: 'packages', element: <Packages /> },
-  { path: 'programs', element: <Programs /> },
+  { path: 'courses', element: <Programs /> },
   { path: 'about', element: <About /> },
   { path: 'book', element: <Contact /> },
   { path: 'privacy', element: <Privacy /> },

@@ -23,7 +23,7 @@ export const pageMeta = {
   },
   programs: {
     slug: 'programs',
-    path: 'programs',
+    path: 'courses',
     title: 'Kite Lessons & Day Experiences Hurghada | Kite Pirates Programs',
     description:
       'Standalone kite courses (3–12hrs), wing foil lessons, island trips, horse riding, desert safari, diving, Golden Hour sunset session, and the 22km Downwind Run.',

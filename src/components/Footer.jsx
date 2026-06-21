@@ -11,7 +11,7 @@ import ShareBar from './ShareBar';
 const LINKS = [
   { to: '/experience', key: 'experience' },
   { to: '/packages', key: 'packages' },
-  { to: '/programs', key: 'programs' },
+  { to: '/courses', key: 'programs' },
   { to: '/about', key: 'about' },
   { to: '/book', key: 'book' },
 ];

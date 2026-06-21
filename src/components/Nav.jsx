@@ -13,7 +13,7 @@ const NAV = [
   { to: '/', key: 'home', end: true },
   { to: '/experience', key: 'experience' },
   { to: '/packages', key: 'packages' },
-  { to: '/programs', key: 'programs' },
+  { to: '/courses', key: 'programs' },
   { to: '/about', key: 'about' },
 ];
 

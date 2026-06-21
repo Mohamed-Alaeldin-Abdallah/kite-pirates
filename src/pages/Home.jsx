@@ -218,7 +218,7 @@ export default function Home() {
             ].map((p, i) => (
               <Reveal key={p.label} delay={i * 0.07}>
                 <Link
-                  to={lp('/programs')}
+                  to={lp('/courses')}
                   className="flex items-center gap-4 rounded-lg border border-mid bg-dark-2 p-6 transition-all duration-200 hover:-translate-y-1 hover:border-teal/40 hover:shadow-teal"
                 >
                   <span className="text-3xl" aria-hidden="true">{p.icon}</span>
