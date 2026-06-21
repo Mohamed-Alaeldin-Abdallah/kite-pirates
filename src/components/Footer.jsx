@@ -6,6 +6,7 @@ import { localizePath } from '../lib/locale';
 import LanguageSelector from './LanguageSelector';
 import WaveDivider from './WaveDivider';
 import { TikTokIcon, WhatsAppIcon } from './BrandIcons';
+import ShareBar from './ShareBar';
 
 const LINKS = [
   { to: '/experience', key: 'experience' },
@@ -75,6 +76,10 @@ export default function Footer() {
           </h2>
           <LanguageSelector compact />
         </div>
+      </div>
+
+      <div className="container-px mx-auto flex max-w-content justify-center border-t border-mid py-6">
+        <ShareBar />
       </div>
 
       <div className="container-px mx-auto flex max-w-content flex-col items-center justify-between gap-2 border-t border-mid py-5 text-xs text-gray sm:flex-row">

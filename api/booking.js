@@ -1,13 +1,11 @@
 // Vercel serverless function — POST /api/booking
-// Receives a booking enquiry, validates it server-side (defence in depth),
-// blocks bots/abuse, and emails the crew. Secrets live in env vars only and
-// are never exposed to the browser.
+// Validates a booking enquiry, blocks bots/abuse, then emails the crew an
+// HTML summary PLUS a CSV attachment (headers row + values row).
+// Secrets live in env vars only and are never exposed to the browser.
 
 import { bookingSchema } from '../src/lib/bookingSchema.js';
 
 // --- best-effort in-memory rate limit ---------------------------------------
-// Note: serverless instances are ephemeral and not shared, so this slows
-// casual abuse but is NOT a substitute for an edge/WAF rate limiter in prod.
 const WINDOW_MS = 60_000;
 const MAX_PER_WINDOW = 5;
 const hits = new Map();
@@ -29,8 +27,7 @@ function clientIp(req) {
   return (Array.isArray(fwd) ? fwd[0] : fwd || '').split(',')[0].trim() || 'unknown';
 }
 
-// Escape values before placing them in an HTML email (prevents HTML/script
-// injection into the inbox).
+// Escape for HTML email body.
 function esc(v = '') {
   return String(v)
     .replace(/&/g, '&amp;')
@@ -40,15 +37,20 @@ function esc(v = '') {
     .replace(/'/g, '&#039;');
 }
 
+// Escape a single CSV cell (RFC 4180: wrap in quotes, double internal quotes).
+function csvCell(v = '') {
+  const s = String(v ?? '');
+  return `"${s.replace(/"/g, '""')}"`;
+}
+
 function allowedOrigin(req) {
   const allow = (process.env.ALLOWED_ORIGINS || '').split(',').map((s) => s.trim()).filter(Boolean);
   const origin = req.headers.origin;
-  if (allow.length === 0) return null; // same-origin only; no CORS header emitted
+  if (allow.length === 0) return null;
   return origin && allow.includes(origin) ? origin : false;
 }
 
 export default async function handler(req, res) {
-  // CORS: only echo back explicitly allow-listed origins.
   const origin = allowedOrigin(req);
   if (origin) {
     res.setHeader('Access-Control-Allow-Origin', origin);
@@ -63,7 +65,6 @@ export default async function handler(req, res) {
   const ip = clientIp(req);
   if (rateLimited(ip)) return res.status(429).json({ error: 'Too many requests' });
 
-  // Parse body safely (Vercel usually parses JSON; guard for raw strings).
   let body = req.body;
   try {
     if (typeof body === 'string') body = JSON.parse(body || '{}');
@@ -72,62 +73,70 @@ export default async function handler(req, res) {
   }
   if (!body || typeof body !== 'object') return res.status(400).json({ error: 'Invalid body' });
 
-  // Honeypot: if the hidden field is filled, silently accept (don't tip off bots).
+  // Honeypot: hidden field filled = bot. Silently accept, don't process.
   if (body.company) return res.status(200).json({ ok: true });
 
-  // Server-side validation — identical rules to the client.
   const parsed = bookingSchema.safeParse(body);
-  if (!parsed.success) {
-    return res.status(422).json({ error: 'Validation failed' });
-  }
+  if (!parsed.success) return res.status(422).json({ error: 'Validation failed' });
   const data = parsed.data;
+
+  // Ordered [Header, Value] pairs — drives both the email table and the CSV.
+  const submittedAt = new Date().toISOString();
+  const fields = [
+    ['Full Name', data.fullName],
+    ['Email', data.email],
+    ['WhatsApp / Phone', data.whatsapp],
+    ['Nationality', data.nationality],
+    ['Preferred Language', data.language],
+    ['Booking Type', data.bookingType],
+    ['Package / Experience', data.package],
+    ['Preferred Arrival Date', data.arrivalDate],
+    ['Number of Guests', data.guests],
+    ['Kite Experience Level', data.experience],
+    ['Bringing Own Equipment', data.ownEquipment],
+    ['How did you hear about us?', data.referral],
+    ['Injuries / Medical', data.medical],
+    ['Message / Special Requests', data.message],
+    ['Submitted At', submittedAt],
+  ];
+
+  // CSV: row 1 = headers, row 2 = values.
+  const csv =
+    fields.map(([k]) => csvCell(k)).join(',') +
+    '\r\n' +
+    fields.map(([, v]) => csvCell(v)).join(',') +
+    '\r\n';
+  const csvBase64 = Buffer.from(csv, 'utf8').toString('base64');
+  const safeName = (data.fullName || 'booking').replace(/[^a-z0-9]+/gi, '-').toLowerCase();
+  const filename = `booking-${safeName}-${submittedAt.slice(0, 10)}.csv`;
+
+  const rows = fields
+    .filter(([, v]) => v !== undefined && v !== '')
+    .map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td></tr>`)
+    .join('');
+  const html = `<h2>New booking enquiry</h2><table cellpadding="6" style="border-collapse:collapse">${rows}</table><p style="color:#888">CSV attached.</p>`;
 
   const to = process.env.BOOKING_TO_EMAIL || 'kitepirateseg@gmail.com';
   const from = process.env.BOOKING_FROM_EMAIL || 'bookings@kitepirateshurghada.com';
   const apiKey = process.env.BOOKING_EMAIL_API_KEY;
 
-  const rows = [
-    ['Name', data.fullName],
-    ['Email', data.email],
-    ['WhatsApp', data.whatsapp],
-    ['Nationality', data.nationality],
-    ['Language', data.language],
-    ['Booking type', data.bookingType],
-    ['Package', data.package],
-    ['Arrival', data.arrivalDate],
-    ['Guests', data.guests],
-    ['Experience', data.experience],
-    ['Own equipment', data.ownEquipment],
-    ['Referral', data.referral],
-    ['Medical', data.medical],
-    ['Message', data.message],
-  ]
-    .filter(([, v]) => v !== undefined && v !== '')
-    .map(([k, v]) => `<tr><td><strong>${esc(k)}</strong></td><td>${esc(v)}</td></tr>`)
-    .join('');
-
-  const html = `<h2>New booking enquiry</h2><table>${rows}</table>`;
-
-  // If no provider key is configured, don't hard-fail the user; log for now.
   if (!apiKey) {
     console.warn('[booking] BOOKING_EMAIL_API_KEY not set — enquiry not emailed:', data.email);
     return res.status(200).json({ ok: true, note: 'received' });
   }
 
   try {
-    // Example: Resend transactional email API.
+    // Resend transactional email API, with the CSV as an attachment.
     const r = await fetch('https://api.resend.com/emails', {
       method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
+      headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
         from,
         to,
         reply_to: data.email,
         subject: `New booking — ${data.fullName} (${data.package || data.bookingType || 'enquiry'})`,
         html,
+        attachments: [{ filename, content: csvBase64 }],
       }),
     });
     if (!r.ok) throw new Error(`Email provider responded ${r.status}`);

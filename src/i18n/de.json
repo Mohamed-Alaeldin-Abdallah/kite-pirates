@@ -147,6 +147,11 @@
     "offline": "Live-Wind derzeit nicht verfügbar.",
     "source": "Quelle"
   },
+  "share": {
+    "title": "Teilen",
+    "copy": "Link kopieren",
+    "copied": "Kopiert!"
+  },
   "notFound": {
     "title": "VON DER KARTE",
     "sub": "Diese Seite ist aufs Meer hinausgetrieben. Zurück zur Crew.",

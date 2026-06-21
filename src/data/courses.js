@@ -1,8 +1,8 @@
 export const kiteCourses = [
-  { name: 'Lost Sailor', hours: 3, target: 'Returning kiters — refresh and reconnect', pricePrivate: 195, priceGroup: 130 },
-  { name: 'First Mate', hours: 6, target: 'Complete beginners — first two sessions', pricePrivate: 385, priceGroup: 255 },
-  { name: 'Full Sail', hours: 9, target: 'Progressing riders — riding and upwind focus', pricePrivate: 545, priceGroup: 360 },
-  { name: 'Free Pirate', hours: 12, target: 'Full beginner course — ride independently', pricePrivate: 685, priceGroup: 455, highlight: true },
+  { name: 'Lost Sailor', hours: 3, target: 'Returning kiters — refresh and reconnect', pricePrivate: 180, priceGroup: 110 },
+  { name: 'First Mate', hours: 6, target: 'Complete beginners — first two sessions', pricePrivate: 320, priceGroup: 260 },
+  { name: 'Full Sail', hours: 9, target: 'Progressing riders — riding and upwind focus', pricePrivate: 420, priceGroup: 370 },
+  { name: 'Free Pirate', hours: 12, target: 'Full beginner course — ride independently', pricePrivate: 500, priceGroup: 440, highlight: true },
 ];
 
 export const wingCourses = [

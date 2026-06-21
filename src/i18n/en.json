@@ -147,6 +147,11 @@
     "offline": "Live wind unavailable right now.",
     "source": "Source"
   },
+  "share": {
+    "title": "Share",
+    "copy": "Copy link",
+    "copied": "Copied!"
+  },
   "notFound": {
     "title": "OFF THE MAP",
     "sub": "This page drifted out to sea. Let's get you back to the crew.",

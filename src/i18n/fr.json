@@ -147,6 +147,11 @@
     "offline": "Vent en direct indisponible pour le moment.",
     "source": "Source"
   },
+  "share": {
+    "title": "Partager",
+    "copy": "Copier le lien",
+    "copied": "Copié !"
+  },
   "notFound": {
     "title": "HORS DE LA CARTE",
     "sub": "Cette page a dérivé vers le large. Retournons vers l'équipage.",

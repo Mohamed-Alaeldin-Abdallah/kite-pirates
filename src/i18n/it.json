@@ -147,6 +147,11 @@
     "offline": "Vento in tempo reale non disponibile al momento.",
     "source": "Fonte"
   },
+  "share": {
+    "title": "Condividi",
+    "copy": "Copia link",
+    "copied": "Copiato!"
+  },
   "notFound": {
     "title": "FUORI DALLA MAPPA",
     "sub": "Questa pagina è andata alla deriva. Torniamo all'equipaggio.",
