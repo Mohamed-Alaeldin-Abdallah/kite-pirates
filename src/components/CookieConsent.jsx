@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getConsent, setConsent, loadAnalytics } from '../lib/analytics';
-import { localizePath } from '../lib/locale';
+import { useLocale } from '../hooks/useLocale';
 
 /**
  * GDPR-style consent banner. Analytics stay OFF until the user clicks Accept.
  * Choice persists in localStorage; declining keeps everything disabled.
  */
 export default function CookieConsent() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const { lp } = useLocale();
   const [show, setShow] = useState(false);
-  const locale = (i18n.resolvedLanguage || 'en').split('-')[0];
 
   useEffect(() => {
     const prior = getConsent();
@@ -44,7 +44,7 @@ export default function CookieConsent() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <p className="text-sm text-gray-light">
               {t('cookie.message')}{' '}
-              <Link to={localizePath('/privacy', locale)} className="text-teal underline">
+              <Link to={lp('/privacy')} className="text-teal underline">
                 {t('cookie.learn')}
               </Link>
             </p>

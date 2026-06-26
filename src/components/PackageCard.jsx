@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { Check, X, Plus } from 'lucide-react';
 import { BtnPrimary, BtnGhost } from './Primitives';
-import { localizePath } from '../lib/locale';
+import { useLocale } from '../hooks/useLocale';
 
 export default function PackageCard({ pkg }) {
-  const { t, i18n } = useTranslation();
-  const locale = (i18n.resolvedLanguage || 'en').split('-')[0];
+  const { t } = useTranslation();
+  const { lp } = useLocale();
   const featured = pkg.featured;
 
   return (
@@ -86,11 +86,11 @@ export default function PackageCard({ pkg }) {
 
       <div className="mt-auto pt-2">
         {featured ? (
-          <BtnPrimary to={localizePath('/book', locale)} className="w-full">
+          <BtnPrimary to={lp('/book')} className="w-full">
             {t('cta.bookYourWeek')}
           </BtnPrimary>
         ) : (
-          <BtnGhost to={localizePath('/book', locale)} className="w-full">
+          <BtnGhost to={lp('/book')} className="w-full">
             {t('cta.bookYourWeek')}
           </BtnGhost>
         )}

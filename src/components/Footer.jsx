@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Instagram, Facebook, Mail } from 'lucide-react';
 import { SOCIAL, CONTACT } from '../lib/config';
-import { localizePath } from '../lib/locale';
+import { useLocale } from '../hooks/useLocale';
 import LanguageSelector from './LanguageSelector';
 import WaveDivider from './WaveDivider';
 import { TikTokIcon, WhatsAppIcon } from './BrandIcons';
@@ -17,9 +17,8 @@ const LINKS = [
 ];
 
 export default function Footer() {
-  const { t, i18n } = useTranslation();
-  const locale = (i18n.resolvedLanguage || 'en').split('-')[0];
-  const lp = (p) => localizePath(p, locale);
+  const { t } = useTranslation();
+  const { lp } = useLocale();
   const year = new Date().getFullYear();
 
   return (

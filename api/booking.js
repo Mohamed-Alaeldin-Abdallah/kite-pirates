@@ -121,7 +121,7 @@ export default async function handler(req, res) {
   const apiKey = process.env.BOOKING_EMAIL_API_KEY;
 
   if (!apiKey) {
-    console.warn('[booking] BOOKING_EMAIL_API_KEY not set — enquiry not emailed:', data.email);
+    console.warn('[booking] BOOKING_EMAIL_API_KEY not set — enquiry received but not emailed.');
     return res.status(200).json({ ok: true, note: 'received' });
   }
 

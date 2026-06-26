@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useScrolled } from '../hooks/useScrolled';
 import { useLockBody } from '../hooks/useLockBody';
-import { localizePath } from '../lib/locale';
+import { useLocale } from '../hooks/useLocale';
 import { BtnPrimary } from './Primitives';
 import LanguageSelector from './LanguageSelector';
 
@@ -18,13 +18,11 @@ const NAV = [
 ];
 
 export default function Nav() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const { lp } = useLocale();
   const scrolled = useScrolled(40);
   const [open, setOpen] = useState(false);
-  const locale = (i18n.resolvedLanguage || 'en').split('-')[0];
   useLockBody(open);
-
-  const lp = (p) => localizePath(p, locale);
 
   return (
     <header

@@ -4,12 +4,12 @@ import { Anchor, MessageCircle, ShieldCheck } from 'lucide-react';
 import Reveal from './Reveal';
 import { Display, BtnPrimary, BtnGhost } from './Primitives';
 import { whatsappUrl } from '../lib/config';
-import { localizePath } from '../lib/locale';
+import { useLocale } from '../hooks/useLocale';
 
 /** Reusable full-width call-to-action band. */
 export default function CtaStrip({ title, sub }) {
-  const { t, i18n } = useTranslation();
-  const locale = (i18n.resolvedLanguage || 'en').split('-')[0];
+  const { t } = useTranslation();
+  const { lp } = useLocale();
   return (
     <section className="section bg-dark-2">
       <div className="container-px mx-auto max-w-content text-center">
@@ -23,7 +23,7 @@ export default function CtaStrip({ title, sub }) {
         </Reveal>
         <Reveal delay={0.16}>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <BtnPrimary to={localizePath('/book', locale)} size="lg">
+            <BtnPrimary to={lp('/book')} size="lg">
               <Anchor className="h-5 w-5" aria-hidden="true" />
               {t('cta.bookYourWeek')}
             </BtnPrimary>
@@ -36,7 +36,7 @@ export default function CtaStrip({ title, sub }) {
         <Reveal delay={0.22}>
           {/* Red button — guest policies (cancellation, no-wind refund, FAQ) */}
           <Link
-            to={`${localizePath('/book', locale)}#policies`}
+            to={`${lp('/book')}#policies`}
             className="splash mt-5 inline-flex items-center justify-center gap-2 rounded-md bg-[#ff6d4a] px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#e85c3a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff6d4a]"
           >
             <ShieldCheck className="h-5 w-5" aria-hidden="true" />

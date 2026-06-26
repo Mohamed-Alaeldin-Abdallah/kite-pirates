@@ -2,11 +2,11 @@ import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { Display } from '../components/Primitives';
 import { BtnPrimary } from '../components/Primitives';
-import { localizePath } from '../lib/locale';
+import { useLocale } from '../hooks/useLocale';
 
 export default function NotFound() {
-  const { t, i18n } = useTranslation();
-  const locale = (i18n.resolvedLanguage || 'en').split('-')[0];
+  const { t } = useTranslation();
+  const { lp } = useLocale();
   return (
     <section className="flex min-h-[80vh] items-center" style={{ paddingTop: 'var(--nav-height)' }}>
       <Helmet>
@@ -20,7 +20,7 @@ export default function NotFound() {
         </Display>
         <p className="mx-auto mt-3 max-w-md text-gray-light">{t('notFound.sub')}</p>
         <div className="mt-8 flex justify-center">
-          <BtnPrimary to={localizePath('/', locale)} size="lg">
+          <BtnPrimary to={lp('/')} size="lg">
             {t('notFound.home')}
           </BtnPrimary>
         </div>

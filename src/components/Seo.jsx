@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { useTranslation } from 'react-i18next';
+import { useLocale } from '../hooks/useLocale';
 import { SITE_URL } from '../lib/config';
 import { KEYWORDS } from '../seo/meta';
 import { LOCALES } from '../i18n';
@@ -12,8 +12,7 @@ import { LOCALES } from '../i18n';
  * user input — so JSON.stringify into a ld+json script is safe here.
  */
 export default function Seo({ meta, schemas = [] }) {
-  const { i18n } = useTranslation();
-  const locale = (i18n.resolvedLanguage || 'en').split('-')[0];
+  const { locale } = useLocale();
 
   const prefix = locale === 'en' ? '' : `/${locale}`;
   const subpath = meta.path ? `/${meta.path}` : '';

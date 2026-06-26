@@ -12,14 +12,13 @@ import { Link } from 'react-router-dom';
 import { pageMeta } from '../seo/meta';
 import { organizationSchema } from '../seo/schemas';
 import { whatsappUrl } from '../lib/config';
-import { localizePath } from '../lib/locale';
+import { useLocale } from '../hooks/useLocale';
 import { useContent } from '../hooks/useContent';
 
 export default function Home() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
+  const { lp } = useLocale();
   const { stats, reviews, experienceTeasers, packages } = useContent();
-  const locale = (i18n.resolvedLanguage || 'en').split('-')[0];
-  const lp = (p) => localizePath(p, locale);
   const teaserPkgs = packages.filter((p) => ['mate', 'pirate', 'captain'].includes(p.id));
 
   return (
