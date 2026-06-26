@@ -43,8 +43,6 @@ export default function Privacy() {
               .
             </p>
           </div>
-
-          <p className="text-sm text-gray">{t('privacy.note')}</p>
         </div>
       </section>
     </>
