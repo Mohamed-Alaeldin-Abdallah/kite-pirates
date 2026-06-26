@@ -8,10 +8,11 @@ import ComparisonTable from '../components/ComparisonTable';
 import { Display } from '../components/Primitives';
 import { pageMeta } from '../seo/meta';
 import { packageSchema } from '../seo/schemas';
-import { packages, discounts } from '../data/packages';
+import { useContent } from '../hooks/useContent';
 
 export default function Packages() {
   const { t } = useTranslation();
+  const { packages, discounts } = useContent();
   const weeks = packages.filter((p) => ['mate', 'pirate', 'captain'].includes(p.id));
   const wings = packages.filter((p) => p.id.startsWith('wing'));
 

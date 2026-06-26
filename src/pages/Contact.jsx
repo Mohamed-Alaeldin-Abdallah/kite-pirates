@@ -8,12 +8,12 @@ import FAQ from '../components/FAQ';
 import { Display, Eyebrow } from '../components/Primitives';
 import { pageMeta } from '../seo/meta';
 import { faqSchema } from '../seo/schemas';
-import { faqs } from '../data/faqs';
-import { bookingFlow, cancellationPolicy, noWindPolicy, paymentMethods } from '../data/conditions';
+import { useContent } from '../hooks/useContent';
 import { SOCIAL, CONTACT, whatsappUrl } from '../lib/config';
 
 export default function Contact() {
   const { t } = useTranslation();
+  const { faqs, bookingFlow, cancellationPolicy, noWindPolicy, paymentMethods } = useContent();
 
   return (
     <>

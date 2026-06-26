@@ -1,5 +1,5 @@
 import { Check, X } from 'lucide-react';
-import { comparisonRows } from '../data/packages';
+import { useContent } from '../hooks/useContent';
 
 function Cell({ value }) {
   if (value === true)
@@ -10,6 +10,7 @@ function Cell({ value }) {
 }
 
 export default function ComparisonTable() {
+  const { comparisonRows } = useContent();
   return (
     <div className="overflow-x-auto rounded-lg border border-mid">
       <table className="w-full min-w-[560px] border-collapse text-center">

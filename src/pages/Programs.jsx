@@ -8,11 +8,11 @@ import ExperienceCard from '../components/ExperienceCard';
 import { Display } from '../components/Primitives';
 import { pageMeta } from '../seo/meta';
 import { courseSchema } from '../seo/schemas';
-import { kiteCourses, wingCourses, courseNotes } from '../data/courses';
-import { experiences } from '../data/experiences';
+import { useContent } from '../hooks/useContent';
 
 export default function Programs() {
   const { t } = useTranslation();
+  const { kiteCourses, wingCourses, courseNotes, experiences } = useContent();
 
   return (
     <>

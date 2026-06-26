@@ -6,10 +6,11 @@ import CtaStrip from '../components/CtaStrip';
 import ImgPlaceholder from '../components/ImgPlaceholder';
 import { Display, Eyebrow, Tag } from '../components/Primitives';
 import { pageMeta } from '../seo/meta';
-import { pirateDay, featureSections, noWindDays } from '../data/experiences';
+import { useContent } from '../hooks/useContent';
 
 export default function Experience() {
   const { t } = useTranslation();
+  const { pirateDay, featureSections, noWindDays } = useContent();
 
   return (
     <>

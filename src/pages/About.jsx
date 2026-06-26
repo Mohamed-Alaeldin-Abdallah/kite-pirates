@@ -6,23 +6,11 @@ import ImgPlaceholder from '../components/ImgPlaceholder';
 import { Display, Eyebrow } from '../components/Primitives';
 import { Users } from 'lucide-react';
 import { pageMeta } from '../seo/meta';
-import { values } from '../data/reviews';
-
-const STORY = [
-  'Hurghada has always been our home. We grew up on this water. We know where the wind hits hardest, where the lagoons hide, where the mountains turn gold at sunset.',
-  "Kite Pirates wasn't built in a boardroom. It was built on the beach — out of a simple belief that kite surfing should be more than lessons and equipment rental. It should be an experience that changes you.",
-  'So we built the thing we always wanted to find — a crew that rides together, eats together, explores together, and never leaves anyone behind. That’s Kite Pirates. Welcome aboard.',
-];
-
-const ABOUT_STATS = [
-  { value: '270', label: 'Wind Days / Year' },
-  { value: '10', label: 'Max Pirates / Week' },
-  { value: '12', label: 'Months Kiting Season' },
-  { value: '5', label: 'Languages' },
-];
+import { useContent } from '../hooks/useContent';
 
 export default function About() {
   const { t } = useTranslation();
+  const { values, aboutStory, aboutStats } = useContent();
 
   return (
     <>
@@ -52,7 +40,7 @@ export default function About() {
               {t('about.storyTitle')}
             </Display>
           </Reveal>
-          {STORY.map((p, i) => (
+          {aboutStory.map((p, i) => (
             <Reveal key={i} delay={i * 0.06}>
               <p className="mb-5 font-accent text-xl italic leading-relaxed text-ink">{p}</p>
             </Reveal>
@@ -85,7 +73,7 @@ export default function About() {
       {/* STATS BAR */}
       <section className="bg-teal text-dark">
         <div className="container-px mx-auto grid max-w-content gap-6 py-12 sm:grid-cols-4">
-          {ABOUT_STATS.map((s, i) => (
+          {aboutStats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.06} className="text-center">
               <p className="font-display text-5xl">{s.value}</p>
               <p className="text-sm font-semibold uppercase tracking-wide">{s.label}</p>

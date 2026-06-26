@@ -13,12 +13,11 @@ import { pageMeta } from '../seo/meta';
 import { organizationSchema } from '../seo/schemas';
 import { whatsappUrl } from '../lib/config';
 import { localizePath } from '../lib/locale';
-import { stats, reviews } from '../data/reviews';
-import { experienceTeasers } from '../data/experiences';
-import { packages } from '../data/packages';
+import { useContent } from '../hooks/useContent';
 
 export default function Home() {
   const { t, i18n } = useTranslation();
+  const { stats, reviews, experienceTeasers, packages } = useContent();
   const locale = (i18n.resolvedLanguage || 'en').split('-')[0];
   const lp = (p) => localizePath(p, locale);
   const teaserPkgs = packages.filter((p) => ['mate', 'pirate', 'captain'].includes(p.id));
@@ -34,7 +33,7 @@ export default function Home() {
           src="/images/hero.jpeg"
           alt="Kite surfing on the Red Sea in Hurghada"
           className="absolute inset-0 h-full w-full object-cover"
-          fetchpriority="high"
+          fetchPriority="high"
         />
         {/* Warm sunset tint over the photo */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_65%_30%,rgba(255,158,74,0.18),transparent_60%)]" />
