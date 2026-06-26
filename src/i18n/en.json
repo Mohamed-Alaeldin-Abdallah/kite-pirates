@@ -152,6 +152,24 @@
     "copy": "Copy link",
     "copied": "Copied!"
   },
+  "privacy": {
+    "title": "PRIVACY",
+    "sub": "Plain language. No surprises.",
+    "intro": "Kite Pirates (“we”) respects your privacy. This notice explains what we collect, why, and your rights under the EU GDPR and applicable law.",
+    "collectTitle": "What we collect",
+    "collect": "When you submit the booking form we collect the details you provide — name, email, phone/WhatsApp, nationality, trip preferences and any optional notes. We only ask for what we need to respond to your enquiry and arrange your trip.",
+    "whyTitle": "Why we use it",
+    "why": "To reply to you, plan your week, and manage your booking. We process this on the basis of taking steps at your request prior to entering an agreement, and your consent, which you give when you submit the form.",
+    "analyticsTitle": "Analytics & cookies",
+    "analytics": "We load analytics (Google Analytics 4 / Meta Pixel) only after you accept via the cookie banner. Decline and no analytics or tracking scripts run. You can change your choice any time by clearing the “kp-consent” entry in your browser storage.",
+    "sharingTitle": "Sharing",
+    "sharing": "We do not sell your data. We share it only with service providers needed to deliver your trip (e.g. accommodation, activity partners) and our email provider, strictly to fulfil your booking.",
+    "retentionTitle": "Retention",
+    "retention": "We keep enquiry details only as long as needed to handle your booking and meet legal or accounting obligations, then delete them.",
+    "rightsTitle": "Your rights",
+    "rights": "You may request access, correction, deletion, or a copy of your data, and withdraw consent at any time. Email",
+    "note": "[Add legal entity name, registered address, and Data Protection contact before launch.]"
+  },
   "notFound": {
     "title": "OFF THE MAP",
     "sub": "This page drifted out to sea. Let's get you back to the crew.",

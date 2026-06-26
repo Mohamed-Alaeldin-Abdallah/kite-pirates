@@ -152,6 +152,24 @@
     "copy": "Copia link",
     "copied": "Copiato!"
   },
+  "privacy": {
+    "title": "PRIVACY",
+    "sub": "Linguaggio chiaro. Nessuna sorpresa.",
+    "intro": "Kite Pirates (“noi”) rispetta la tua privacy. Questa nota spiega cosa raccogliamo, perché, e i tuoi diritti ai sensi del GDPR UE e della legge applicabile.",
+    "collectTitle": "Cosa raccogliamo",
+    "collect": "Quando invii il modulo di prenotazione raccogliamo i dati che fornisci — nome, email, telefono/WhatsApp, nazionalità, preferenze di viaggio ed eventuali note facoltative. Chiediamo solo ciò che serve per rispondere alla tua richiesta e organizzare il tuo viaggio.",
+    "whyTitle": "Perché li usiamo",
+    "why": "Per risponderti, pianificare la tua settimana e gestire la tua prenotazione. Trattiamo i dati sulla base di misure adottate su tua richiesta prima della conclusione di un contratto e del tuo consenso, che fornisci inviando il modulo.",
+    "analyticsTitle": "Analisi e cookie",
+    "analytics": "Carichiamo gli strumenti di analisi (Google Analytics 4 / Meta Pixel) solo dopo che hai accettato tramite il banner dei cookie. Se rifiuti, non vengono eseguiti script di analisi o tracciamento. Puoi cambiare la tua scelta in qualsiasi momento eliminando la voce “kp-consent” nella memoria del browser.",
+    "sharingTitle": "Condivisione",
+    "sharing": "Non vendiamo i tuoi dati. Li condividiamo solo con i fornitori necessari per il tuo viaggio (es. alloggio, partner delle attività) e con il nostro provider email, esclusivamente per evadere la tua prenotazione.",
+    "retentionTitle": "Conservazione",
+    "retention": "Conserviamo i dati della richiesta solo per il tempo necessario a gestire la prenotazione e ad adempiere agli obblighi legali o contabili, poi li eliminiamo.",
+    "rightsTitle": "I tuoi diritti",
+    "rights": "Puoi richiedere in qualsiasi momento accesso, rettifica, cancellazione o una copia dei tuoi dati e revocare il consenso. Email",
+    "note": "[Aggiungi ragione sociale, sede legale e contatto per la protezione dei dati prima del lancio.]"
+  },
   "notFound": {
     "title": "FUORI DALLA MAPPA",
     "sub": "Questa pagina è andata alla deriva. Torniamo all'equipaggio.",

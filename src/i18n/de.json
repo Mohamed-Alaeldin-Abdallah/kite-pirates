@@ -152,6 +152,24 @@
     "copy": "Link kopieren",
     "copied": "Kopiert!"
   },
+  "privacy": {
+    "title": "DATENSCHUTZ",
+    "sub": "Klare Sprache. Keine Überraschungen.",
+    "intro": "Kite Pirates („wir“) respektiert deine Privatsphäre. Dieser Hinweis erklärt, was wir erheben, warum, und deine Rechte nach der EU-DSGVO und geltendem Recht.",
+    "collectTitle": "Was wir erheben",
+    "collect": "Wenn du das Buchungsformular absendest, erheben wir die von dir angegebenen Daten — Name, E-Mail, Telefon/WhatsApp, Nationalität, Reisewünsche und optionale Anmerkungen. Wir fragen nur, was wir brauchen, um auf deine Anfrage zu antworten und deine Reise zu organisieren.",
+    "whyTitle": "Wofür wir sie nutzen",
+    "why": "Um dir zu antworten, deine Woche zu planen und deine Buchung zu verwalten. Wir verarbeiten dies auf Grundlage von Maßnahmen auf deine Anfrage hin vor Vertragsschluss sowie deiner Einwilligung, die du mit dem Absenden des Formulars gibst.",
+    "analyticsTitle": "Analyse & Cookies",
+    "analytics": "Wir laden Analyse-Tools (Google Analytics 4 / Meta Pixel) erst, nachdem du im Cookie-Banner zugestimmt hast. Lehnst du ab, laufen keine Analyse- oder Tracking-Skripte. Du kannst deine Wahl jederzeit ändern, indem du den Eintrag „kp-consent“ in deinem Browser-Speicher löschst.",
+    "sharingTitle": "Weitergabe",
+    "sharing": "Wir verkaufen deine Daten nicht. Wir geben sie nur an Dienstleister weiter, die für deine Reise nötig sind (z. B. Unterkunft, Aktivitätspartner) und an unseren E-Mail-Anbieter, ausschließlich zur Erfüllung deiner Buchung.",
+    "retentionTitle": "Speicherung",
+    "retention": "Wir bewahren Anfragedaten nur so lange auf, wie es zur Abwicklung deiner Buchung und zur Erfüllung gesetzlicher oder buchhalterischer Pflichten nötig ist, und löschen sie danach.",
+    "rightsTitle": "Deine Rechte",
+    "rights": "Du kannst jederzeit Auskunft, Berichtigung, Löschung oder eine Kopie deiner Daten verlangen und deine Einwilligung widerrufen. E-Mail",
+    "note": "[Rechtlichen Namen, eingetragene Adresse und Datenschutzkontakt vor dem Launch ergänzen.]"
+  },
   "notFound": {
     "title": "VON DER KARTE",
     "sub": "Diese Seite ist aufs Meer hinausgetrieben. Zurück zur Crew.",
