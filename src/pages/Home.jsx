@@ -8,6 +8,7 @@ import PackageCard from '../components/PackageCard';
 import WaveDivider from '../components/WaveDivider';
 import FloatingElements from '../components/FloatingElements';
 import WindCards from '../components/WindCards';
+import CoursesCta from '../components/CoursesCta';
 import { Link } from 'react-router-dom';
 import { pageMeta } from '../seo/meta';
 import { organizationSchema } from '../seo/schemas';
@@ -93,6 +94,15 @@ export default function Home() {
         {/* Shoreline wave into the next section */}
         <div className="absolute inset-x-0 bottom-0">
           <WaveDivider color="var(--color-dark-2)" />
+        </div>
+      </section>
+
+      {/* Animated "Check Our Courses" CTA */}
+      <section className="bg-dark-2">
+        <div className="container-px mx-auto flex max-w-content justify-center py-10 sm:py-14">
+          <Reveal>
+            <CoursesCta />
+          </Reveal>
         </div>
       </section>
 

@@ -155,3 +155,141 @@
 .skip-link:focus {
   top: 12px;
 }
+
+/* ==========================================================================
+   Animated "Check Our Courses" CTA (component: CoursesCta.jsx)
+   Palette: Slate Storm #1C2F3A · Teal Canopy #2F6F6A · Ember #B2433C
+            Golden Honey #C78A1E · Mahogany #4C1A17. Pure CSS, seamless loop.
+   ========================================================================== */
+.ccta {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(12px, 2.5vw, 22px);
+  padding: clamp(12px, 2.2vw, 18px) clamp(18px, 3vw, 30px);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(199, 138, 30, 0.28);
+  background:
+    radial-gradient(120% 130% at 18% 0%, rgba(47, 111, 106, 0.22), transparent 55%),
+    radial-gradient(90% 120% at 100% 100%, rgba(178, 67, 60, 0.16), transparent 60%),
+    linear-gradient(160deg, #1c2f3a 0%, #10202a 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  cursor: pointer;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease,
+    border-color 0.45s ease;
+  will-change: transform;
+}
+/* moody droplet / foliage texture */
+.ccta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.55;
+  pointer-events: none;
+  background:
+    radial-gradient(2px 2px at 20% 30%, rgba(234, 247, 251, 0.1), transparent 60%),
+    radial-gradient(1.5px 1.5px at 68% 22%, rgba(234, 247, 251, 0.08), transparent 60%),
+    radial-gradient(2.2px 2.2px at 86% 66%, rgba(47, 111, 106, 0.16), transparent 60%),
+    radial-gradient(1.5px 1.5px at 38% 82%, rgba(234, 247, 251, 0.06), transparent 60%);
+}
+/* light sweep across the button */
+.ccta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -45%;
+  width: 40%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(100deg, transparent, rgba(199, 138, 30, 0.16), transparent);
+  transform: skewX(-16deg);
+  animation: ccta-shine 6s ease-in-out infinite;
+}
+@keyframes ccta-shine {
+  0%, 62% { left: -45%; }
+  86%, 100% { left: 135%; }
+}
+.ccta:hover,
+.ccta:focus-visible {
+  transform: translateY(-3px) scale(1.05);
+  border-color: rgba(199, 138, 30, 0.6);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.5), 0 0 34px rgba(199, 138, 30, 0.28);
+  outline: none;
+}
+
+.ccta-emblem-wrap { position: relative; display: block; flex: none; }
+.ccta-emblem { display: block; width: clamp(58px, 15vw, 96px); height: auto; }
+
+.ccta-kite-group { transform-box: fill-box; transform-origin: 50% 15%; animation: ccta-sway 5s ease-in-out infinite; }
+@keyframes ccta-sway {
+  0%, 100% { transform: rotate(-4.5deg) translateY(0); }
+  50% { transform: rotate(4.5deg) translateY(-1.6px); }
+}
+.ccta-lines { transform-box: fill-box; transform-origin: 50% 0; animation: ccta-line 5s ease-in-out infinite; }
+@keyframes ccta-line {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.035); }
+}
+.ccta-wave1 { animation: ccta-wave 6s linear infinite; }
+.ccta-wave2 { animation: ccta-wave 4.4s linear infinite; }
+@keyframes ccta-wave {
+  from { transform: translateX(0); }
+  to { transform: translateX(-60px); }
+}
+.ccta-sparkle { transform-box: fill-box; transform-origin: center; animation: ccta-sparkle 5.5s ease-in-out infinite; }
+@keyframes ccta-sparkle {
+  0%, 66%, 100% { opacity: 0; transform: scale(0.3) rotate(0deg); }
+  78% { opacity: 1; transform: scale(1) rotate(45deg); }
+  90% { opacity: 0; transform: scale(0.6) rotate(70deg); }
+}
+.ccta-glowring { transform-box: fill-box; transform-origin: center; animation: ccta-glow 5s ease-in-out infinite; }
+@keyframes ccta-glow {
+  0%, 100% { opacity: 0.06; transform: scale(0.97); }
+  50% { opacity: 0.4; transform: scale(1.05); }
+}
+.ccta-compass { transform-box: fill-box; transform-origin: center; animation: ccta-compass 16s ease-in-out infinite; }
+@keyframes ccta-compass {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+/* hover intensifies the scene */
+.ccta:hover .ccta-wave2 { opacity: 0.85; animation-duration: 3.4s; }
+.ccta:hover .ccta-wave1 { animation-duration: 4.4s; }
+.ccta:hover .ccta-compass { animation-duration: 9s; }
+.ccta:hover .ccta-glowring { animation-duration: 3.4s; }
+.ccta:hover .ccta-emblem { filter: drop-shadow(0 0 6px rgba(199, 138, 30, 0.35)); }
+
+.ccta-text { display: flex; flex-direction: column; line-height: 1; text-align: start; }
+.ccta-eyebrow {
+  font-family: var(--font-body);
+  font-size: clamp(9px, 1.4vw, 11px);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #3a8079;
+  margin-bottom: 6px;
+}
+[lang='ar'] .ccta-eyebrow, [dir='rtl'] .ccta-eyebrow { letter-spacing: 0; }
+.ccta-title {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 4.5vw, 32px);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #c78a1e;
+}
+[lang='ar'] .ccta-title, [dir='rtl'] .ccta-title { font-family: var(--font-arabic); font-weight: 800; }
+.ccta-arrow {
+  flex: none;
+  width: clamp(18px, 3vw, 24px);
+  height: auto;
+  color: #c78a1e;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ccta:hover .ccta-arrow { transform: translateX(5px); }
+[dir='rtl'] .ccta-arrow { transform: scaleX(-1); }
+[dir='rtl'] .ccta:hover .ccta-arrow { transform: scaleX(-1) translateX(5px); }
