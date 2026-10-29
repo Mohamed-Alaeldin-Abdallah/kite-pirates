@@ -17,8 +17,11 @@ export default function About() {
       <Seo meta={pageMeta.about} />
 
       {/* HERO SPLIT */}
-      <section className="grain relative overflow-hidden" style={{ paddingTop: 'var(--nav-height)' }}>
-        <div className="container-px mx-auto grid max-w-content items-center gap-10 py-16 md:grid-cols-2">
+      <section
+        className="border-b border-mid bg-white"
+        style={{ paddingTop: 'calc(var(--nav-height) + clamp(32px, 6vw, 64px))' }}
+      >
+        <div className="container-px mx-auto grid max-w-content items-center gap-10 pb-16 md:grid-cols-2">
           <Reveal direction="right">
             <ImgPlaceholder src="/images/crew.jpeg" alt="The Kite Pirates crew" label="The Crew" icon={Users} ratio="aspect-[4/3]" className="min-h-[320px]" />
           </Reveal>
@@ -36,7 +39,7 @@ export default function About() {
       <section className="section">
         <div className="container-px mx-auto max-w-prose text-center">
           <Reveal>
-            <Display as="h2" className="mb-6 text-3xl text-teal sm:text-4xl">
+            <Display as="h2" className="mb-8 text-3xl text-ink sm:text-4xl">
               {t('about.storyTitle')}
             </Display>
           </Reveal>
@@ -49,19 +52,19 @@ export default function About() {
       </section>
 
       {/* VALUES */}
-      <section className="section bg-dark-2">
+      <section className="section border-y border-mid bg-dark-3">
         <div className="container-px mx-auto max-w-content">
           <Reveal>
             <Display as="h2" className="text-4xl text-ink sm:text-5xl">
               {t('about.valuesTitle')}
             </Display>
           </Reveal>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-3">
             {values.map((v, i) => (
               <Reveal key={v.title} delay={i * 0.08}>
-                <div className="rounded-lg border border-mid bg-dark p-6">
+                <div className="h-full rounded-lg border border-mid bg-white p-6">
                   <span className="text-4xl" aria-hidden="true">{v.icon}</span>
-                  <h3 className="mt-3 font-display text-2xl uppercase text-teal">{v.title}</h3>
+                  <h3 className="mt-3 font-display text-2xl uppercase text-ink">{v.title}</h3>
                   <p className="mt-1 text-gray-light">{v.body}</p>
                 </div>
               </Reveal>
@@ -71,12 +74,12 @@ export default function About() {
       </section>
 
       {/* STATS BAR */}
-      <section className="bg-teal text-dark">
-        <div className="container-px mx-auto grid max-w-content gap-6 py-12 sm:grid-cols-4">
+      <section className="border-b border-mid bg-white">
+        <div className="container-px mx-auto grid max-w-content gap-6 py-16 sm:grid-cols-4">
           {aboutStats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.06} className="text-center">
-              <p className="font-display text-5xl">{s.value}</p>
-              <p className="text-sm font-semibold uppercase tracking-wide">{s.label}</p>
+              <p className="font-display text-5xl text-ocean">{s.value}</p>
+              <p className="mt-1 text-sm font-semibold uppercase tracking-[0.08em] text-ink">{s.label}</p>
             </Reveal>
           ))}
         </div>

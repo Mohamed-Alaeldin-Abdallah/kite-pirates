@@ -1,15 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { Anchor, MessageCircle, Star, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Seo from '../components/Seo';
 import Reveal from '../components/Reveal';
 import { Display, Eyebrow, BtnPrimary, BtnGhost } from '../components/Primitives';
 import CtaStrip from '../components/CtaStrip';
 import PackageCard from '../components/PackageCard';
-import WaveDivider from '../components/WaveDivider';
-import FloatingElements from '../components/FloatingElements';
 import WindCards from '../components/WindCards';
-import CoursesCta from '../components/CoursesCta';
-import { Link } from 'react-router-dom';
 import { pageMeta } from '../seo/meta';
 import { organizationSchema } from '../seo/schemas';
 import { whatsappUrl } from '../lib/config';
@@ -26,33 +23,12 @@ export default function Home() {
     <>
       <Seo meta={pageMeta.home} schemas={[organizationSchema()]} />
 
-      {/* HERO — kitesurf scene over a sunset sea */}
-      <section className="grain relative flex min-h-[100svh] items-center overflow-hidden">
-        {/* Hero background photo */}
-        <img
-          src="/images/hero.jpeg"
-          alt="Kite surfing on the Red Sea in Hurghada"
-          className="absolute inset-0 h-full w-full object-cover"
-          fetchPriority="high"
-        />
-        {/* Warm sunset tint over the photo */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_65%_30%,rgba(255,158,74,0.18),transparent_60%)]" />
-        {/* Shimmering sea band */}
-        <div className="absolute inset-x-0 bottom-0 h-[42%] bg-[linear-gradient(180deg,rgba(10,61,92,0.2),rgba(6,34,54,0.85))]" />
-        {/* Sky props: drifting kites + seagulls */}
-        <FloatingElements variant="sky" />
-        {/* Readability veil */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-dark/30 to-dark/85" />
-
-        {/* Ghost watermark */}
-        <span className="ghost-watermark absolute inset-x-0 top-[22%] text-center text-[22vw] leading-none">
-          KITE PIRATES
-        </span>
-
-        <div
-          className="container-px relative mx-auto grid w-full max-w-content items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]"
-          style={{ paddingTop: 'var(--nav-height)' }}
-        >
+      {/* HERO — airy white, text + framed photo */}
+      <section
+        className="border-b border-mid bg-white"
+        style={{ paddingTop: 'calc(var(--nav-height) + clamp(40px, 7vw, 72px))' }}
+      >
+        <div className="container-px mx-auto grid max-w-content items-center gap-12 pb-[clamp(48px,8vw,88px)] lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <Reveal>
               <Eyebrow className="mb-5">{t('home.eyebrow')}</Eyebrow>
@@ -63,15 +39,15 @@ export default function Home() {
               </Display>
             </Reveal>
             <Reveal delay={0.12}>
-              <p className="mt-6 max-w-xl text-lg text-foam/90 sm:text-xl">{t('home.sub')}</p>
+              <p className="mt-6 max-w-xl text-lg text-gray-light">{t('home.sub')}</p>
             </Reveal>
             <Reveal delay={0.18}>
               <div className="mt-9 flex flex-wrap gap-4">
-                <BtnPrimary to={lp('/packages')} size="lg">
+                <BtnPrimary to={lp('/packages')}>
                   <Anchor className="h-5 w-5" aria-hidden="true" />
                   {t('cta.seePackages')}
                 </BtnPrimary>
-                <BtnGhost href={whatsappUrl(t('whatsapp.prefill'))} external size="lg">
+                <BtnGhost href={whatsappUrl(t('whatsapp.prefill'))} external>
                   <MessageCircle className="h-5 w-5" aria-hidden="true" />
                   {t('cta.whatsappNow')}
                 </BtnGhost>
@@ -79,50 +55,45 @@ export default function Home() {
             </Reveal>
           </div>
 
-          {/* Live wind cards */}
-          <Reveal delay={0.24} direction="left" className="lg:justify-self-end">
-            <WindCards />
+          <Reveal delay={0.12} direction="left">
+            <img
+              src="/images/hero.jpeg"
+              alt="Kite surfing on the Red Sea in Hurghada"
+              className="aspect-[4/3] w-full rounded-lg border border-mid object-cover lg:aspect-[4/5]"
+              fetchPriority="high"
+            />
           </Reveal>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute inset-x-0 bottom-24 flex flex-col items-center gap-2 sm:bottom-28">
-          <span className="h-12 w-px origin-bottom animate-pulseLine bg-aqua" />
-          <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-foam/70">Scroll</span>
-        </div>
-
-        {/* Shoreline wave into the next section */}
-        <div className="absolute inset-x-0 bottom-0">
-          <WaveDivider color="var(--color-dark-2)" />
         </div>
       </section>
 
-      {/* Animated "Check Our Courses" CTA */}
-      <section className="bg-dark-2">
-        <div className="container-px mx-auto flex max-w-content justify-center py-10 sm:py-14">
+      {/* LIVE WIND */}
+      <section className="section">
+        <div className="container-px mx-auto max-w-content">
           <Reveal>
-            <CoursesCta />
+            <Eyebrow className="mb-6">{t('wind.live', 'Live')} · Hurghada</Eyebrow>
+          </Reveal>
+          <Reveal delay={0.06}>
+            <WindCards />
           </Reveal>
         </div>
       </section>
 
       {/* STATS BAR */}
-      <section className="border-y border-mid bg-dark-2">
-        <div className="container-px mx-auto grid max-w-content gap-6 py-12 sm:grid-cols-3">
+      <section className="border-y border-mid bg-dark-3">
+        <div className="container-px mx-auto grid max-w-content gap-6 py-16 sm:grid-cols-3">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.08} className="text-center sm:text-start">
-              <p className="font-display text-6xl text-teal">{s.value}</p>
-              <p className="font-display text-xl uppercase text-ink">{s.label}</p>
-              <p className="text-sm text-gray-light">{s.desc}</p>
+              <p className="font-display text-6xl text-ocean">{s.value}</p>
+              <p className="mt-1 font-display text-xl uppercase text-ink">{s.label}</p>
+              <p className="mt-1 text-sm text-gray-light">{s.desc}</p>
             </Reveal>
           ))}
         </div>
       </section>
 
       {/* BRAND STATEMENT */}
-      <section className="section relative overflow-hidden">
-        <FloatingElements variant="sea" className="opacity-70" />
-        <div className="container-px relative mx-auto max-w-prose text-center">
+      <section className="section">
+        <div className="container-px mx-auto max-w-prose text-center">
           <Reveal>
             <p className="font-accent text-2xl italic leading-relaxed text-ink sm:text-3xl">
               “{t('home.statementQuote')}”
@@ -132,24 +103,22 @@ export default function Home() {
       </section>
 
       {/* REVIEWS STRIP */}
-      <WaveDivider color="var(--color-teal)" />
-      <section className="bg-teal text-dark">
-        <div className="container-px mx-auto max-w-content overflow-x-auto py-8">
-          <ul className="flex gap-6">
+      <section className="border-y border-mid bg-dark-3">
+        <div className="container-px mx-auto max-w-content overflow-x-auto py-12">
+          <ul className="flex gap-8">
             {reviews.map((r) => (
               <li key={r.quote} className="flex min-w-[260px] flex-col gap-2">
                 <span className="flex gap-0.5" aria-label={`${r.stars} out of 5 stars`}>
                   {Array.from({ length: r.stars }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-dark" aria-hidden="true" />
+                    <Star key={i} className="h-4 w-4 fill-sand text-sand" aria-hidden="true" />
                   ))}
                 </span>
-                <p className="font-accent text-lg italic">“{r.quote}”</p>
+                <p className="font-accent text-lg italic text-ink">“{r.quote}”</p>
               </li>
             ))}
           </ul>
         </div>
       </section>
-      <WaveDivider color="var(--color-teal)" flip />
 
       {/* EXPERIENCE TEASER */}
       <section className="section">
@@ -160,24 +129,23 @@ export default function Home() {
               {t('home.experienceTitle')}
             </Display>
           </Reveal>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {experienceTeasers.map((card, i) => (
               <Reveal key={card.title} delay={(i % 3) * 0.07}>
                 <Link
                   to={lp('/experience')}
-                  className="grain group relative flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-lg border border-mid bg-gradient-to-br from-dark-3 to-dark p-5 transition-all duration-200 hover:-translate-y-1 hover:border-teal/40 hover:shadow-teal"
+                  className="group flex aspect-[4/3] flex-col justify-end overflow-hidden rounded-lg border border-mid bg-white p-6 transition-colors duration-300 hover:border-teal"
                 >
-                  <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,var(--color-teal-glow),transparent_60%)]" />
-                  <span className="relative mb-2 text-4xl transition-transform duration-200 group-hover:scale-110" aria-hidden="true">
+                  <span className="mb-2 text-4xl transition-transform duration-300 group-hover:scale-110" aria-hidden="true">
                     {card.icon}
                   </span>
-                  <h3 className="relative font-display text-2xl uppercase text-ink">{card.title}</h3>
-                  <p className="relative text-sm text-gray-light">{card.desc}</p>
+                  <h3 className="font-display text-2xl uppercase text-ink">{card.title}</h3>
+                  <p className="mt-1 text-sm text-gray-light">{card.desc}</p>
                 </Link>
               </Reveal>
             ))}
           </div>
-          <div className="mt-8">
+          <div className="mt-10">
             <BtnGhost to={lp('/experience')}>
               {t('cta.exploreExperience')} <ArrowRight className="h-4 w-4 flip-rtl" aria-hidden="true" />
             </BtnGhost>
@@ -186,7 +154,7 @@ export default function Home() {
       </section>
 
       {/* PACKAGES TEASER */}
-      <section className="section bg-dark-2">
+      <section className="section bg-dark-3">
         <div className="container-px mx-auto max-w-content">
           <Reveal>
             <Eyebrow>{t('home.packagesSub')}</Eyebrow>
@@ -201,7 +169,7 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
-          <div className="mt-8">
+          <div className="mt-10">
             <BtnGhost to={lp('/packages')}>
               {t('cta.viewPackages')} <ArrowRight className="h-4 w-4 flip-rtl" aria-hidden="true" />
             </BtnGhost>
@@ -218,7 +186,7 @@ export default function Home() {
               {t('home.programsTitle')}
             </Display>
           </Reveal>
-          <div className="mt-10 grid gap-5 sm:grid-cols-3">
+          <div className="mt-12 grid gap-5 sm:grid-cols-3">
             {[
               { icon: '🪁', label: t('home.programsKite') },
               { icon: '🏄', label: t('home.programsWing') },
@@ -227,11 +195,11 @@ export default function Home() {
               <Reveal key={p.label} delay={i * 0.07}>
                 <Link
                   to={lp('/courses')}
-                  className="flex items-center gap-4 rounded-lg border border-mid bg-dark-2 p-6 transition-all duration-200 hover:-translate-y-1 hover:border-teal/40 hover:shadow-teal"
+                  className="flex items-center gap-4 rounded-lg border border-mid bg-white p-6 transition-colors duration-300 hover:border-teal"
                 >
                   <span className="text-3xl" aria-hidden="true">{p.icon}</span>
                   <span className="font-display text-2xl uppercase text-ink">{p.label}</span>
-                  <ArrowRight className="ms-auto h-5 w-5 flip-rtl text-teal" aria-hidden="true" />
+                  <ArrowRight className="ms-auto h-5 w-5 flip-rtl text-ocean" aria-hidden="true" />
                 </Link>
               </Reveal>
             ))}

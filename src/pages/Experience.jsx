@@ -29,8 +29,8 @@ export default function Experience() {
           <ol className="mt-10 max-w-2xl border-s border-mid">
             {pirateDay.map((item, i) => (
               <Reveal as="li" key={item.time} delay={i * 0.06} className="relative ps-8 pb-8 last:pb-0">
-                <span className="absolute start-0 top-1 h-3 w-3 -translate-x-1/2 rounded-full bg-teal flip-rtl" />
-                <p className="font-display text-xl uppercase text-teal">{item.time}</p>
+                <span className="absolute start-0 top-1 h-3 w-3 -translate-x-1/2 rounded-full bg-ocean flip-rtl" />
+                <p className="font-display text-xl uppercase text-ocean">{item.time}</p>
                 <p className="text-gray-light">{item.body}</p>
               </Reveal>
             ))}
@@ -39,7 +39,7 @@ export default function Experience() {
       </section>
 
       {/* FEATURE SECTIONS — alternating */}
-      <section className="bg-dark-2">
+      <section className="border-y border-mid bg-dark-3">
         <div className="container-px mx-auto max-w-content py-16">
           <div className="flex flex-col gap-16">
             {featureSections.map((f, i) => {
@@ -95,7 +95,7 @@ export default function Experience() {
             ))}
           </div>
           <Reveal delay={0.1}>
-            <p className="mt-6 rounded-md border border-teal/30 bg-teal/10 p-4 text-sm text-gray-light">
+            <p className="mt-6 rounded-md border border-mid bg-dark-3 p-4 text-sm text-gray-light">
               {t('experience.noWindNote')}
             </p>
           </Reveal>

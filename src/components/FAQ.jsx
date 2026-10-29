@@ -14,11 +14,11 @@ function Item({ faq, isOpen, onToggle }) {
           aria-expanded={isOpen}
           aria-controls={`${id}-panel`}
           id={`${id}-btn`}
-          className="flex w-full items-center justify-between gap-4 py-5 text-start text-base font-medium text-ink transition-colors hover:text-teal"
+          className="flex w-full items-center justify-between gap-4 py-5 text-start text-base font-medium text-ink transition-colors hover:text-ocean"
         >
           <span>{faq.q}</span>
           <ChevronDown
-            className={`h-5 w-5 shrink-0 text-teal transition-transform duration-200 ${
+            className={`h-5 w-5 shrink-0 text-ocean transition-transform duration-200 ${
               isOpen ? 'rotate-180' : ''
             }`}
             aria-hidden="true"

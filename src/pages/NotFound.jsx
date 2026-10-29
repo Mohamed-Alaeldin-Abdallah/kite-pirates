@@ -14,7 +14,7 @@ export default function NotFound() {
         <meta name="robots" content="noindex" />
       </Helmet>
       <div className="container-px mx-auto max-w-content text-center">
-        <p className="font-display text-8xl text-teal">404</p>
+        <p className="font-display text-8xl text-ocean">404</p>
         <Display as="h1" className="mt-2 text-4xl text-ink sm:text-5xl">
           {t('notFound.title')}
         </Display>

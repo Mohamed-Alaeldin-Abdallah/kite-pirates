@@ -10,16 +10,14 @@ export default function PackageCard({ pkg }) {
 
   return (
     <article
-      className={`group relative flex h-full flex-col rounded-lg border p-6 transition-all duration-200 hover:-translate-y-1 ${
-        featured
-          ? 'border-teal bg-dark-3 shadow-teal'
-          : 'border-mid bg-dark-2 hover:border-teal/40 hover:shadow-teal'
+      className={`relative flex h-full flex-col rounded-lg border p-7 transition-colors duration-300 ${
+        featured ? 'border-teal bg-dark-3' : 'border-mid bg-white hover:border-teal'
       }`}
     >
       {pkg.badge && (
         <span
-          className={`absolute -top-3 start-6 rounded-md px-3 py-1 text-xs font-bold uppercase tracking-wide ${
-            featured ? 'bg-teal text-dark' : 'bg-yellow text-dark'
+          className={`absolute -top-3 start-6 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] ${
+            featured ? 'bg-teal text-ink' : 'bg-ocean text-white'
           }`}
         >
           {pkg.badge}
@@ -34,17 +32,17 @@ export default function PackageCard({ pkg }) {
       </div>
 
       <div className="mb-1 flex items-baseline gap-1">
-        <span className="font-display text-5xl text-teal">€{pkg.price.toLocaleString()}</span>
+        <span className="font-display text-5xl text-ocean">€{pkg.price.toLocaleString()}</span>
       </div>
-      <p className="mb-5 text-sm text-gray-light">{pkg.tagline}</p>
+      <p className="mb-6 text-sm text-gray-light">{pkg.tagline}</p>
 
       {pkg.note ? (
-        <p className="mb-5 rounded-md bg-mid/40 p-3 text-sm text-gray-light">{pkg.note}</p>
+        <p className="mb-5 rounded-md bg-dark-3 p-3 text-sm text-gray-light">{pkg.note}</p>
       ) : (
         <ul className="mb-5 space-y-2 text-sm">
           {pkg.included?.map((item) => (
             <li key={item} className="flex gap-2 text-gray-light">
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-teal" aria-hidden="true" />
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-ocean" aria-hidden="true" />
               <span>{item}</span>
             </li>
           ))}
@@ -59,12 +57,12 @@ export default function PackageCard({ pkg }) {
 
       {pkg.addons?.length > 0 && (
         <div className="mb-5">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.08em] text-gray">
             {t('common.addOns')}
           </p>
           <ul className="space-y-1 text-sm">
             {pkg.addons.map((a) => (
-              <li key={a.label} className="flex items-center gap-2 text-yellow">
+              <li key={a.label} className="flex items-center gap-2 text-ocean">
                 <Plus className="h-3.5 w-3.5" aria-hidden="true" />
                 {a.label} — €{a.price}/{a.per}
               </li>
@@ -74,13 +72,13 @@ export default function PackageCard({ pkg }) {
       )}
 
       {pkg.quote && (
-        <p className="mb-5 font-accent text-sm italic text-gray-light">“{pkg.quote}”</p>
+        <p className="mb-5 text-sm italic text-gray-light">“{pkg.quote}”</p>
       )}
 
       {pkg.partnerPrice && (
         <p className="mb-5 text-sm text-gray-light">
           {t('common.partnerPrice')}:{' '}
-          <span className="font-semibold text-yellow">€{pkg.partnerPrice.toLocaleString()}</span>
+          <span className="font-semibold text-ocean">€{pkg.partnerPrice.toLocaleString()}</span>
         </p>
       )}
 

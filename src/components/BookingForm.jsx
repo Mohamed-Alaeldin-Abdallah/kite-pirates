@@ -49,7 +49,7 @@ export default function BookingForm() {
   if (status === 'success') {
     return (
       <div className="flex flex-col items-center gap-3 rounded-lg border border-teal/40 bg-teal/10 p-8 text-center">
-        <CheckCircle2 className="h-10 w-10 text-teal" aria-hidden="true" />
+        <CheckCircle2 className="h-10 w-10 text-ocean" aria-hidden="true" />
         <p className="text-lg text-ink">{t('book.success')}</p>
       </div>
     );

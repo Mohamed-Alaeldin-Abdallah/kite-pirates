@@ -128,16 +128,6 @@ export default {
         },
       ],
     },
-    { name: 'Equitazione — guidata da Jade', badge: 'Più condivisa' },
-    { name: 'Snorkeling' },
-    { name: 'Orange Bay' },
-    {
-      badge: 'Notte in città',
-      duration: '~5 ore (20–1)',
-      minMax: 'Min 2 / Max 8',
-      includes: ['Trasporto', 'Mercati e bazar locali', 'Bowling', 'Biliardo', 'Soste caffè locali'],
-      note: 'Cibo e bevande acquistati individualmente — parte dell’autentica esperienza locale.',
-    },
   ],
   experienceTeasers: [
     { title: 'Gite alle isole', desc: 'Due isole del Mar Rosso a settimana — motoscafo, snorkeling, mare aperto.' },

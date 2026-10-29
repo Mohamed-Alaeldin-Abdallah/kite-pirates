@@ -44,32 +44,6 @@ export const experiences = [
       },
     ],
   },
-  {
-    name: 'Horse Riding — Guided by Jade',
-    icon: '🐴',
-    badge: 'Most Shared',
-    contactOnly: true,
-  },
-  {
-    name: 'Snorkeling',
-    icon: '🐠',
-    contactOnly: true,
-  },
-  {
-    name: 'Orange Bay',
-    icon: '🌴',
-    contactOnly: true,
-  },
-  {
-    name: "Pirate's Night",
-    icon: '🌙',
-    badge: 'City Night',
-    price: '€65 pp',
-    duration: '~5 hrs (8pm–1am)',
-    minMax: 'Min 2 / Max 8',
-    includes: ['Transport', 'Local markets & bazaars', 'Bowling', 'Billiards', 'Local coffee stops'],
-    note: 'Food and drinks purchased individually — part of the authentic local experience.',
-  },
 ];
 
 // Preserved for later re-enable (Horse Riding / Snorkeling / Orange Bay full detail,

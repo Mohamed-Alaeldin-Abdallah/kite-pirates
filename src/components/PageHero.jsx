@@ -1,37 +1,17 @@
 import Reveal from './Reveal';
 import { Display, Eyebrow } from './Primitives';
-import FloatingElements from './FloatingElements';
-import WaveDivider from './WaveDivider';
 
 /**
- * Reusable inner-page hero with a sky-to-sea sunset gradient, drifting sky
- * props, and a shoreline wave leading into the page body. `poster` lets the
- * client drop a background image; until then the gradient stands in.
+ * Minimal inner-page hero: airy white, thin uppercase title, generous space.
+ * `poster`, if given, renders as a framed 12px image beneath the intro.
  */
-export default function PageHero({
-  eyebrow,
-  title,
-  sub,
-  height = '60vh',
-  poster,
-  waveColor = 'var(--color-dark)',
-  children,
-}) {
+export default function PageHero({ eyebrow, title, sub, poster, children }) {
   return (
     <section
-      className="grain relative flex items-end overflow-hidden"
-      style={{ minHeight: height, paddingTop: 'var(--nav-height)' }}
+      className="border-b border-mid bg-white"
+      style={{ paddingTop: 'calc(var(--nav-height) + clamp(40px, 8vw, 88px))' }}
     >
-      {poster ? (
-        <img src={poster} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
-      ) : null}
-      {/* Sunset sky-to-sea wash */}
-      <div className="absolute inset-0" style={{ background: 'var(--grad-sunset)' }} />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_70%_25%,rgba(255,158,74,0.35),transparent_60%)]" />
-      <FloatingElements variant="sky" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-dark/30 to-dark/90" />
-
-      <div className="container-px relative mx-auto w-full max-w-content pb-16 pt-16">
+      <div className="container-px mx-auto w-full max-w-content pb-[clamp(40px,8vw,88px)]">
         {eyebrow && (
           <Reveal>
             <Eyebrow className="mb-4">{eyebrow}</Eyebrow>
@@ -44,7 +24,7 @@ export default function PageHero({
         </Reveal>
         {sub && (
           <Reveal delay={0.12}>
-            <p className="mt-5 max-w-xl text-lg text-foam/90">{sub}</p>
+            <p className="mt-5 max-w-xl text-lg text-gray-light">{sub}</p>
           </Reveal>
         )}
         {children && (
@@ -52,10 +32,16 @@ export default function PageHero({
             <div className="mt-8 flex flex-wrap gap-4">{children}</div>
           </Reveal>
         )}
-      </div>
-
-      <div className="absolute inset-x-0 bottom-0">
-        <WaveDivider color={waveColor} />
+        {poster && (
+          <Reveal delay={0.1}>
+            <img
+              src={poster}
+              alt=""
+              aria-hidden="true"
+              className="mt-10 aspect-[21/9] w-full rounded-lg border border-mid object-cover"
+            />
+          </Reveal>
+        )}
       </div>
     </section>
   );

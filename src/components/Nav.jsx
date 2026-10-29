@@ -27,11 +27,9 @@ export default function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        open
-          ? 'border-b border-mid/60 bg-dark'
-          : scrolled
-            ? 'border-b border-mid/60 bg-dark/80 backdrop-blur-xl'
-            : 'bg-transparent'
+        open || scrolled
+          ? 'border-b border-mid bg-white/90 backdrop-blur-md'
+          : 'border-b border-transparent bg-transparent'
       }`}
       style={{ height: 'var(--nav-height)' }}
     >
@@ -44,22 +42,22 @@ export default function Nav() {
       >
         <Link
           to={lp('/')}
-          className="font-display text-2xl tracking-wide text-ink"
+          className="font-display text-2xl font-normal uppercase tracking-[0.06em] text-ink"
           aria-label="Kite Pirates home"
         >
-          KITE<span className="text-coral">PIRATES</span>
+          KITE<span className="text-ocean">PIRATES</span>
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden items-center gap-7 lg:flex">
+        <ul className="hidden items-center gap-8 lg:flex">
           {NAV.map((item) => (
             <li key={item.key}>
               <NavLink
                 to={lp(item.to)}
                 end={item.end}
                 className={({ isActive }) =>
-                  `text-sm font-medium tracking-wide transition-colors ${
-                    isActive ? 'text-teal' : 'text-gray-light hover:text-ink'
+                  `text-[13px] font-medium uppercase tracking-[0.08em] transition-colors ${
+                    isActive ? 'text-ocean' : 'text-gray-light hover:text-ink'
                   }`
                 }
               >
@@ -73,7 +71,7 @@ export default function Nav() {
           <div className="hidden lg:block">
             <LanguageSelector />
           </div>
-          <BtnPrimary to={lp('/book')} className="hidden sm:inline-flex">
+          <BtnPrimary to={lp('/book')} size="sm" className="hidden sm:inline-flex">
             {t('nav.bookNow')}
           </BtnPrimary>
           <button
@@ -96,7 +94,7 @@ export default function Nav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-[var(--nav-height)] z-40 flex flex-col gap-2 overflow-y-auto bg-dark px-6 py-8 lg:hidden"
+            className="fixed inset-0 top-[var(--nav-height)] z-40 flex flex-col gap-1 overflow-y-auto bg-white px-6 py-8 lg:hidden"
           >
             {[...NAV, { to: '/book', key: 'book' }].map((item, i) => (
               <motion.div
@@ -110,8 +108,8 @@ export default function Nav() {
                   end={item.end}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
-                    `block border-b border-mid/50 py-4 font-display text-3xl uppercase tracking-wide ${
-                      isActive ? 'text-teal' : 'text-ink'
+                    `block border-b border-mid py-4 font-display text-3xl uppercase tracking-[0.04em] ${
+                      isActive ? 'text-ocean' : 'text-ink'
                     }`
                   }
                 >

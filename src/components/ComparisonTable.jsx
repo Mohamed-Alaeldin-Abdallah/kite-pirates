@@ -3,10 +3,10 @@ import { useContent } from '../hooks/useContent';
 
 function Cell({ value }) {
   if (value === true)
-    return <Check className="mx-auto h-5 w-5 text-teal" aria-label="Included" />;
+    return <Check className="mx-auto h-5 w-5 text-ocean" aria-label="Included" />;
   if (value === false)
-    return <X className="mx-auto h-5 w-5 text-gray/60" aria-label="Not included" />;
-  return <span className="text-sm font-medium text-yellow">{value}</span>;
+    return <X className="mx-auto h-5 w-5 text-gray/50" aria-label="Not included" />;
+  return <span className="text-sm font-medium text-ocean">{value}</span>;
 }
 
 export default function ComparisonTable() {
@@ -17,11 +17,11 @@ export default function ComparisonTable() {
         <caption className="sr-only">Package comparison across Mate, Pirate and Captain</caption>
         <thead>
           <tr className="bg-dark-3">
-            <th scope="col" className="p-4 text-start font-body text-xs uppercase tracking-wide text-gray">
+            <th scope="col" className="p-4 text-start font-body text-xs uppercase tracking-[0.08em] text-gray">
               Feature
             </th>
             <th scope="col" className="p-4 font-display text-xl uppercase text-ink">Mate</th>
-            <th scope="col" className="p-4 font-display text-xl uppercase text-teal">
+            <th scope="col" className="p-4 font-display text-xl uppercase text-ocean">
               Pirate
             </th>
             <th scope="col" className="p-4 font-display text-xl uppercase text-ink">Captain</th>
@@ -29,12 +29,12 @@ export default function ComparisonTable() {
         </thead>
         <tbody>
           {comparisonRows.map((row, i) => (
-            <tr key={row.label} className={i % 2 ? 'bg-dark-2' : 'bg-dark'}>
+            <tr key={row.label} className={`border-t border-mid ${i % 2 ? 'bg-dark-3' : 'bg-white'}`}>
               <th scope="row" className="p-3 text-start text-sm font-normal text-gray-light">
                 {row.label}
               </th>
               <td className="p-3"><Cell value={row.mate} /></td>
-              <td className="bg-teal/5 p-3"><Cell value={row.pirate} /></td>
+              <td className="bg-teal/10 p-3"><Cell value={row.pirate} /></td>
               <td className="p-3"><Cell value={row.captain} /></td>
             </tr>
           ))}

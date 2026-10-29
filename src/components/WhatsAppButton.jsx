@@ -5,7 +5,6 @@ import { MessageCircle, X } from 'lucide-react';
 import { whatsappUrl, WHATSAPP_NUMBERS } from '../lib/config';
 
 // One WhatsApp bar with three language contacts: UK, Italy, Germany.
-// Each flag opens WhatsApp with that language's number and a prefilled message.
 const CONTACTS = [
   { key: 'uk', flag: '🇬🇧', label: 'English', msg: "Hi Kite Pirates, I'd like to book a week" },
   { key: 'it', flag: '🇮🇹', label: 'Italiano', msg: 'Ciao Kite Pirates, vorrei prenotare una settimana' },
@@ -33,7 +32,7 @@ export default function WhatsAppButton() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-2 rounded-full border border-aqua/20 bg-dark-2/95 py-2 ps-3 pe-4 text-sm font-semibold text-ink shadow-card backdrop-blur-md transition-colors hover:border-teal hover:text-teal"
+                  className="flex items-center gap-2 rounded-full border border-mid bg-white py-2 ps-3 pe-4 text-sm font-semibold text-ink transition-colors hover:border-teal hover:text-ocean"
                 >
                   <span className="text-lg leading-none" aria-hidden="true">{c.flag}</span>
                   {c.label}
@@ -49,11 +48,11 @@ export default function WhatsAppButton() {
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-label={open ? t('whatsapp.close', 'Close WhatsApp menu') : t('whatsapp.aria')}
-        className="relative inline-flex h-14 w-14 items-center justify-center self-end rounded-full bg-teal text-dark shadow-teal transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+        className="relative inline-flex h-14 w-14 items-center justify-center self-end rounded-full bg-teal text-ink transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
       >
         {open ? <X className="h-7 w-7" aria-hidden="true" /> : <MessageCircle className="h-7 w-7" aria-hidden="true" />}
         {!open && (
-          <span className="absolute end-1 top-1 h-3 w-3 animate-floatDot rounded-full border-2 border-dark bg-coral" />
+          <span className="absolute end-1 top-1 h-3 w-3 animate-floatDot rounded-full border-2 border-white bg-ocean" />
         )}
       </button>
     </div>

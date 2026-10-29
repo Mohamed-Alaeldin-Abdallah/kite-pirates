@@ -4,7 +4,6 @@ import { Instagram, Facebook, Mail } from 'lucide-react';
 import { SOCIAL, CONTACT } from '../lib/config';
 import { useLocale } from '../hooks/useLocale';
 import LanguageSelector from './LanguageSelector';
-import WaveDivider from './WaveDivider';
 import { TikTokIcon, WhatsAppIcon } from './BrandIcons';
 import ShareBar from './ShareBar';
 
@@ -22,20 +21,17 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-dark">
-      <div className="absolute inset-x-0 -top-px -translate-y-full">
-        <WaveDivider color="var(--color-dark)" />
-      </div>
-      <div className="container-px mx-auto grid max-w-content gap-10 py-14 md:grid-cols-4">
+    <footer className="border-t border-mid bg-white">
+      <div className="container-px mx-auto grid max-w-content gap-10 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
-          <Link to={lp('/')} className="font-display text-3xl tracking-wide text-ink">
-            KITE<span className="text-coral">PIRATES</span>
+          <Link to={lp('/')} className="font-display text-3xl uppercase tracking-[0.06em] text-ink">
+            KITE<span className="text-ocean">PIRATES</span>
           </Link>
           <p className="mt-3 max-w-xs text-sm text-gray-light">{t('footer.tagline')}</p>
         </div>
 
         <div>
-          <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+          <h2 className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-ocean">
             {t('footer.explore')}
           </h2>
           <ul className="space-y-2 text-sm">
@@ -50,27 +46,27 @@ export default function Footer() {
         </div>
 
         <div>
-          <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+          <h2 className="mb-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-ocean">
             {t('footer.connect')}
           </h2>
           <div className="mb-4 flex flex-wrap gap-3">
-            <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-light hover:text-teal">
+            <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-light hover:text-ocean">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href={SOCIAL.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-gray-light hover:text-teal">
+            <a href={SOCIAL.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-gray-light hover:text-ocean">
               <TikTokIcon className="h-5 w-5" />
             </a>
-            <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-light hover:text-teal">
+            <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-light hover:text-ocean">
               <Facebook className="h-5 w-5" />
             </a>
-            <a href={SOCIAL.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-gray-light hover:text-teal">
+            <a href={SOCIAL.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-gray-light hover:text-ocean">
               <WhatsAppIcon className="h-5 w-5" />
             </a>
-            <a href={`mailto:${CONTACT.email}`} aria-label="Email" className="text-gray-light hover:text-teal">
+            <a href={`mailto:${CONTACT.email}`} aria-label="Email" className="text-gray-light hover:text-ocean">
               <Mail className="h-5 w-5" />
             </a>
           </div>
-          <h2 className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+          <h2 className="mb-2 text-[13px] font-semibold uppercase tracking-[0.1em] text-ocean">
             {t('footer.language')}
           </h2>
           <LanguageSelector compact />
@@ -84,7 +80,7 @@ export default function Footer() {
       <div className="container-px mx-auto flex max-w-content flex-col items-center justify-between gap-2 border-t border-mid py-5 text-xs text-gray sm:flex-row">
         <span>© {year} Kite Pirates. {t('footer.rights')}</span>
         <span className="flex items-center gap-3">
-          <Link to={lp('/privacy')} className="hover:text-gray-light">
+          <Link to={lp('/privacy')} className="hover:text-ink">
             {t('footer.privacy')}
           </Link>
           <span aria-hidden="true">·</span>

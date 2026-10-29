@@ -32,8 +32,8 @@ export default function Contact() {
           <ol className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {bookingFlow.map((s, i) => (
               <Reveal as="li" key={s.step} delay={i * 0.07}>
-                <div className="h-full rounded-lg border border-mid bg-dark-2 p-5">
-                  <span className="font-display text-4xl text-teal">0{s.step}</span>
+                <div className="h-full rounded-lg border border-mid bg-white p-5">
+                  <span className="font-display text-4xl text-ocean">0{s.step}</span>
                   <h3 className="mt-1 font-display text-xl uppercase text-ink">{s.title}</h3>
                   <p className="mt-1 text-sm text-gray-light">{s.body}</p>
                 </div>
@@ -47,7 +47,7 @@ export default function Contact() {
       </section>
 
       {/* Form + channels */}
-      <section className="section bg-dark-2">
+      <section className="section bg-dark-3">
         <div className="container-px mx-auto grid max-w-content gap-12 lg:grid-cols-[1.4fr_1fr]">
           <div>
             <Reveal>
@@ -64,17 +64,17 @@ export default function Contact() {
             <Reveal>
               <Eyebrow>{t('book.channelsTitle')}</Eyebrow>
               <div className="mt-4 flex flex-col gap-3">
-                <a href={whatsappUrl(t('whatsapp.prefill'))} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg border border-mid bg-dark p-4 text-ink transition-colors hover:border-teal/40">
-                  <MessageCircle className="h-5 w-5 text-teal" aria-hidden="true" /> WhatsApp
+                <a href={whatsappUrl(t('whatsapp.prefill'))} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg border border-mid bg-white p-4 text-ink transition-colors hover:border-teal">
+                  <MessageCircle className="h-5 w-5 text-ocean" aria-hidden="true" /> WhatsApp
                 </a>
-                <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-3 rounded-lg border border-mid bg-dark p-4 text-ink transition-colors hover:border-teal/40">
-                  <Mail className="h-5 w-5 text-teal" aria-hidden="true" /> {CONTACT.email}
+                <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-3 rounded-lg border border-mid bg-white p-4 text-ink transition-colors hover:border-teal">
+                  <Mail className="h-5 w-5 text-ocean" aria-hidden="true" /> {CONTACT.email}
                 </a>
-                <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg border border-mid bg-dark p-4 text-ink transition-colors hover:border-teal/40">
-                  <Instagram className="h-5 w-5 text-teal" aria-hidden="true" /> @KitePiratesEgypt
+                <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg border border-mid bg-white p-4 text-ink transition-colors hover:border-teal">
+                  <Instagram className="h-5 w-5 text-ocean" aria-hidden="true" /> @KitePiratesEgypt
                 </a>
-                <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg border border-mid bg-dark p-4 text-ink transition-colors hover:border-teal/40">
-                  <Facebook className="h-5 w-5 text-teal" aria-hidden="true" /> Kite Pirates Egypt
+                <a href={SOCIAL.facebook} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg border border-mid bg-white p-4 text-ink transition-colors hover:border-teal">
+                  <Facebook className="h-5 w-5 text-ocean" aria-hidden="true" /> Kite Pirates Egypt
                 </a>
               </div>
             </Reveal>
@@ -119,7 +119,7 @@ export default function Contact() {
       </section>
 
       {/* FAQ */}
-      <section className="section bg-dark-2">
+      <section className="section bg-dark-3">
         <div className="container-px mx-auto max-w-content">
           <Reveal>
             <Display as="h2" className="mb-8 text-center text-4xl text-ink sm:text-5xl">

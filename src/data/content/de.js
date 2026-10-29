@@ -128,16 +128,6 @@ export default {
         },
       ],
     },
-    { name: 'Reiten — geführt von Jade', badge: 'Am meisten geteilt' },
-    { name: 'Schnorcheln' },
-    { name: 'Orange Bay' },
-    {
-      badge: 'City-Nacht',
-      duration: '~5 Std. (20–1 Uhr)',
-      minMax: 'Min. 2 / Max. 8',
-      includes: ['Transport', 'Lokale Märkte & Basare', 'Bowling', 'Billard', 'Lokale Kaffeestopps'],
-      note: 'Essen und Getränke werden individuell gekauft — Teil des authentischen lokalen Erlebnisses.',
-    },
   ],
   experienceTeasers: [
     { title: 'Inseltrips', desc: 'Zwei Inseln im Roten Meer pro Woche — Speedboot, Schnorcheln, offenes Wasser.' },

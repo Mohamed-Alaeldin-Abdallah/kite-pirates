@@ -1,8 +1,6 @@
 /**
  * Styled placeholder used wherever client photography will drop in.
- * If `src` is provided it renders a real <img> (lazy, async, with alt).
- * Otherwise it shows a branded gradient block with an icon + label so the
- * layout reads correctly before assets arrive.
+ * With `src` it renders a real <img>; otherwise a minimal framed block.
  */
 export default function ImgPlaceholder({
   src,
@@ -20,7 +18,7 @@ export default function ImgPlaceholder({
         alt={alt}
         loading="lazy"
         decoding="async"
-        className={`${ratio} ${rounded} w-full object-cover ${className}`}
+        className={`${ratio} ${rounded} w-full border border-mid object-cover ${className}`}
       />
     );
   }
@@ -29,12 +27,11 @@ export default function ImgPlaceholder({
     <div
       role="img"
       aria-label={alt || label || 'Kite Pirates photo placeholder'}
-      className={`${ratio} ${rounded} grain relative flex w-full flex-col items-center justify-center overflow-hidden border border-mid bg-gradient-to-br from-dark-3 to-dark text-gray ${className}`}
+      className={`${ratio} ${rounded} flex w-full flex-col items-center justify-center border border-mid bg-dark-3 text-gray ${className}`}
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,var(--color-teal-glow),transparent_60%)]" />
-      {Icon ? <Icon className="relative mb-2 h-8 w-8 text-teal/70" aria-hidden="true" /> : null}
+      {Icon ? <Icon className="mb-2 h-8 w-8 text-ocean/70" aria-hidden="true" /> : null}
       {label ? (
-        <span className="relative font-body text-xs uppercase tracking-[0.2em] text-gray-light">
+        <span className="font-body text-xs uppercase tracking-[0.2em] text-gray-light">
           {label}
         </span>
       ) : null}

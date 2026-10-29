@@ -42,11 +42,11 @@ export default function ShareBar({ className = '' }) {
   };
 
   const btn =
-    'inline-flex h-10 w-10 items-center justify-center rounded-full border border-mid bg-dark-2 text-gray-light transition-colors hover:border-teal hover:text-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal';
+    'inline-flex h-10 w-10 items-center justify-center rounded-full border border-mid bg-white text-gray-light transition-colors hover:border-teal hover:text-ocean focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal';
 
   return (
     <div className={`flex flex-wrap items-center gap-3 ${className}`}>
-      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+      <span className="text-xs font-semibold uppercase tracking-[0.1em] text-ocean">
         {t('share.title', 'Share')}
       </span>
       <div className="flex flex-wrap items-center gap-2">
@@ -88,9 +88,9 @@ export default function ShareBar({ className = '' }) {
           <Send className="h-5 w-5" aria-hidden="true" />
         </button>
         <button type="button" onClick={copy} aria-label={t('share.copy', 'Copy link')} className={btn}>
-          {copied ? <Check className="h-5 w-5 text-teal" aria-hidden="true" /> : <Link2 className="h-5 w-5" aria-hidden="true" />}
+          {copied ? <Check className="h-5 w-5 text-ocean" aria-hidden="true" /> : <Link2 className="h-5 w-5" aria-hidden="true" />}
         </button>
-        {copied && <span className="text-xs text-teal">{t('share.copied', 'Copied!')}</span>}
+        {copied && <span className="text-xs text-ocean">{t('share.copied', 'Copied!')}</span>}
       </div>
     </div>
   );

@@ -7,7 +7,6 @@ import { useLocale } from '../hooks/useLocale';
 
 /**
  * GDPR-style consent banner. Analytics stay OFF until the user clicks Accept.
- * Choice persists in localStorage; declining keeps everything disabled.
  */
 export default function CookieConsent() {
   const { t } = useTranslation();
@@ -39,12 +38,12 @@ export default function CookieConsent() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 24 }}
-          className="fixed inset-x-3 bottom-3 z-[60] mx-auto max-w-2xl rounded-lg border border-mid bg-dark-2/95 p-4 shadow-card backdrop-blur-md sm:inset-x-auto sm:end-5 sm:start-auto"
+          className="fixed inset-x-3 bottom-3 z-[60] mx-auto max-w-2xl rounded-lg border border-mid bg-white p-4 sm:inset-x-auto sm:end-5 sm:start-auto"
         >
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <p className="text-sm text-gray-light">
               {t('cookie.message')}{' '}
-              <Link to={lp('/privacy')} className="text-teal underline">
+              <Link to={lp('/privacy')} className="text-ocean underline">
                 {t('cookie.learn')}
               </Link>
             </p>
@@ -52,14 +51,14 @@ export default function CookieConsent() {
               <button
                 type="button"
                 onClick={decline}
-                className="rounded-md px-4 py-2 text-sm font-semibold text-gray-light transition-colors hover:text-ink"
+                className="rounded-full px-4 py-2 text-sm font-semibold text-gray-light transition-colors hover:text-ink"
               >
                 {t('cookie.decline')}
               </button>
               <button
                 type="button"
                 onClick={accept}
-                className="rounded-md bg-teal px-4 py-2 text-sm font-semibold text-dark transition-colors hover:bg-teal-dark"
+                className="rounded-full bg-teal px-4 py-2 text-sm font-semibold text-ink transition-colors hover:bg-teal-dark"
               >
                 {t('cookie.accept')}
               </button>

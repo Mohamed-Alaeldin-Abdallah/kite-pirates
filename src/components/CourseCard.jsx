@@ -5,8 +5,8 @@ export default function CourseCard({ course }) {
   const { t } = useTranslation();
   return (
     <article
-      className={`splash flex h-full flex-col rounded-lg border p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-aqua ${
-        course.highlight ? 'border-teal bg-dark-3' : 'border-mid bg-dark-2 hover:border-teal/40'
+      className={`flex h-full flex-col rounded-lg border p-5 transition-colors duration-300 ${
+        course.highlight ? 'border-teal bg-dark-3' : 'border-mid bg-white hover:border-teal'
       }`}
     >
       <div className="mb-2 flex items-center justify-between">
@@ -19,11 +19,11 @@ export default function CourseCard({ course }) {
       <p className="mb-4 text-sm text-gray-light">{course.target}</p>
       <div className="mt-auto grid grid-cols-2 gap-3 border-t border-mid pt-4 text-sm">
         <div>
-          <p className="text-xs uppercase tracking-wide text-gray">{t('common.private')}</p>
-          <p className="font-display text-2xl text-teal">€{course.pricePrivate}</p>
+          <p className="text-xs uppercase tracking-[0.08em] text-gray">{t('common.private')}</p>
+          <p className="font-display text-2xl text-ocean">€{course.pricePrivate}</p>
         </div>
         <div>
-          <p className="text-xs uppercase tracking-wide text-gray">{t('common.group')}</p>
+          <p className="text-xs uppercase tracking-[0.08em] text-gray">{t('common.group')}</p>
           <p className="font-display text-2xl text-ink">€{course.priceGroup}</p>
         </div>
       </div>

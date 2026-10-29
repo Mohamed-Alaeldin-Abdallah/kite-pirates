@@ -47,7 +47,7 @@ export default function Programs() {
       </section>
 
       {/* Wing courses */}
-      <section className="section bg-dark-2">
+      <section className="section bg-dark-3">
         <div className="container-px mx-auto max-w-content">
           <Reveal>
             <Display as="h2" className="text-4xl text-ink sm:text-5xl">

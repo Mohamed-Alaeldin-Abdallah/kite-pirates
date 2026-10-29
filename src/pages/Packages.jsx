@@ -45,7 +45,7 @@ export default function Packages() {
       </section>
 
       {/* Discounts */}
-      <section className="section bg-dark-2">
+      <section className="section bg-dark-3">
         <div className="container-px mx-auto max-w-content">
           <Reveal>
             <Display as="h2" className="text-4xl text-ink sm:text-5xl">
@@ -55,7 +55,7 @@ export default function Packages() {
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {discounts.map((d, i) => (
               <Reveal key={d.label} delay={i * 0.08}>
-                <div className="flex items-center justify-between rounded-lg border border-mid bg-dark p-6">
+                <div className="flex items-center justify-between rounded-lg border border-mid bg-white p-6">
                   <div>
                     <p className="font-display text-2xl uppercase text-ink">{d.label}</p>
                     <p className="text-sm text-gray-light">{d.condition}</p>

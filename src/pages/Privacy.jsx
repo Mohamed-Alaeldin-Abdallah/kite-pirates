@@ -37,7 +37,7 @@ export default function Privacy() {
             <h2 className="mb-2 font-display text-2xl uppercase text-ink">{t('privacy.rightsTitle')}</h2>
             <p>
               {t('privacy.rights')}{' '}
-              <a className="text-teal" href={`mailto:${CONTACT.email}`}>
+              <a className="text-ocean" href={`mailto:${CONTACT.email}`}>
                 {CONTACT.email}
               </a>
               .
