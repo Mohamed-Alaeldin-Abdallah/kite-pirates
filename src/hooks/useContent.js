@@ -17,13 +17,15 @@ import { bookingFlow, cancellationPolicy, noWindPolicy, paymentMethods } from '.
 import { reviews, values, stats } from '../data/reviews';
 import { aboutStory, aboutStats } from '../data/about';
 
-// Per-language translation overlays (text only). en/fr/ru have none yet →
-// they use the English data unchanged (so no risk of regression there).
+// Per-language translation overlays (text only). English stays the source of
+// truth for structure + prices; overlays carry the translated copy.
 import de from '../data/content/de';
 import it from '../data/content/it';
 import ar from '../data/content/ar';
+import fr from '../data/content/fr';
+import ru from '../data/content/ru';
 
-const OVERRIDES = { de, it, ar };
+const OVERRIDES = { de, it, ar, fr, ru };
 
 const EN = {
   packages,
@@ -59,7 +61,7 @@ export function useContent() {
 
   return useMemo(() => {
     const ov = OVERRIDES[lang];
-    if (!ov) return EN; // en / fr / ru → English data as-is
+    if (!ov) return EN; // en → English data as-is
     const out = {};
     for (const key of Object.keys(EN)) {
       out[key] = mergeCollection(EN[key], ov[key]);
