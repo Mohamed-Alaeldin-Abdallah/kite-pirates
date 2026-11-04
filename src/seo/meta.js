@@ -5,14 +5,7 @@ export const pageMeta = {
     path: '',
     title: 'Kite Pirates — Kite Surfing Hurghada | Red Sea Egypt',
     description:
-      'Premium kite surfing courses, wing foil lessons, and all-inclusive Pirates Week packages in Hurghada, Red Sea. 270 days of wind. Max 10 pirates per week.',
-  },
-  experience: {
-    slug: 'experience',
-    path: 'experience',
-    title: 'The Pirates Week Experience | Kite Pirates Hurghada',
-    description:
-      'Island trips, hidden lagoons, horse riding in the Red Sea, desert BBQ, photography, and the From Dusk Till Dawn day. The full Hurghada experience.',
+      'Kite & wing foil courses, equipment rental, Ghost Bay and White Island experiences, and all-inclusive Pirates Week packages in Hurghada, Red Sea. 270 days of wind.',
   },
   packages: {
     slug: 'packages',
@@ -21,12 +14,19 @@ export const pageMeta = {
     description:
       'All-inclusive kite surfing week packages in Hurghada from €1,099. Accommodation, food, transport, kite course and experiences included. Limited to 10 pirates per week.',
   },
-  programs: {
-    slug: 'programs',
-    path: 'courses',
-    title: 'Kite Lessons & Day Experiences Hurghada | Kite Pirates Programs',
+  standalone: {
+    slug: 'standalone',
+    path: 'standaloneexperince',
+    title: 'Standalone Experiences Hurghada | Ghost Bay & White Island — Kite Pirates',
     description:
-      'Standalone kite courses (3–12hrs), wing foil lessons, island trips, horse riding, desert safari, diving, Golden Hour sunset session, and the 22km Downwind Run.',
+      'Book standalone Red Sea experiences in Hurghada — Ghost Bay full-day (€180) and White Island kite & snorkel trips. Equipment, transport and guide included.',
+  },
+  safari: {
+    slug: 'safari',
+    path: 'Safari',
+    title: 'Red Sea & Desert Safari Hurghada | Kite Pirates',
+    description:
+      'Multi-day Kite Pirates safari packages in Hurghada from €1,400. Desert and Red Sea adventure, guided by the crew. Contact us for dates and details.',
   },
   about: {
     slug: 'about',

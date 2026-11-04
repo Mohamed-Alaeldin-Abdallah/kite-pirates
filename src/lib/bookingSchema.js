@@ -8,7 +8,7 @@ export const PACKAGE_OPTIONS = [
   'Mate', 'Pirate', 'Captain', 'Wing Pirate Week', 'Wing Captain Week',
   'Lost Sailor', 'First Mate', 'Full Sail', 'Free Pirate',
   'Wing Taster', 'Wing Starter', 'Wing Rider',
-  'Golden Hour', 'Downwind Run', 'Island Trip',
+  'Ghost Bay', 'White Island', 'Equipment Rental', 'Safari',
 ];
 
 export const bookingSchema = z.object({

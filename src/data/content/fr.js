@@ -1,6 +1,12 @@
 // French content overlay — translated text only, mirroring the English data
 // order. Machine-translated; have a native speaker polish before final launch.
 export default {
+  rentals: [
+    { label: 'Demi-journée / 2 h' },
+    { label: '1 jour / 4 h' },
+    { label: '3 jours' },
+    { label: '1 semaine' },
+  ],
   packages: [
     {
       tagline: 'Pour les kiters expérimentés qui voyagent léger',
@@ -95,24 +101,16 @@ export default {
   ],
   experiences: [
     {
-      badge: 'Expérience signature',
-      duration: "3–4 h (fin d'après-midi → coucher du soleil)",
-      level: 'Tous niveaux',
-      minMax: 'Min 2 / Max 6',
-      includes: ['Session de kite', 'Équipement', 'Photographie professionnelle', 'Dîner'],
-      note: 'La photographie est incluse — pas optionnelle. Le cliché au coucher du soleil EST le produit.',
+      tagline: 'Expérience journée complète',
+      badge: 'En vedette',
+      duration: '9 h',
+      includesList: ['Équipement', 'Transport', 'Expérience journée complète'],
       description:
-        "Le vent tombe. Le ciel devient doré. Les montagnes avalent le soleil entier — et tu es encore sur l'eau quand ça arrive.",
+        '9 heures à Ghost Bay, équipement, transport et expérience journée complète inclus.',
     },
     {
-      badge: 'Intermédiaire+',
-      distance: "~22–25 km sur l'eau",
-      duration: '2–3 h',
-      level: 'Intermédiaires à avancés uniquement',
-      includes: ['Guide', 'Bateau de sécurité (obligatoire)', 'Transport retour'],
-    },
-    {
-      name: 'Sorties aux îles',
+      name: 'White Island',
+      tagline: 'Sorties aux îles',
       tiers: [
         {
           name: "Journée kite sur l'île",
@@ -128,7 +126,7 @@ export default {
         },
       ],
     },
-  ],
+    ],
   experienceTeasers: [
     { title: 'Sorties aux îles', desc: 'Deux îles de la mer Rouge par semaine — bateau rapide, snorkeling, eau libre.' },
     { title: 'Chevaux & mer', desc: 'Monte à cheval dans la mer Rouge, les montagnes dans le dos.' },

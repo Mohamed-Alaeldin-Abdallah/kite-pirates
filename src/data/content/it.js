@@ -1,6 +1,12 @@
 // Italian content overlay — translated text only, mirroring the English data
 // order. Machine-translated; have a native speaker polish before final launch.
 export default {
+  rentals: [
+    { label: 'Mezza giornata / 2 ore' },
+    { label: '1 giorno / 4 ore' },
+    { label: '3 giorni' },
+    { label: '1 settimana' },
+  ],
   packages: [
     {
       tagline: 'Per kiter esperti che viaggiano leggeri',
@@ -95,24 +101,16 @@ export default {
   ],
   experiences: [
     {
-      badge: 'Esperienza Signature',
-      duration: '3–4 ore (tardo pomeriggio → tramonto)',
-      level: 'Tutti i livelli',
-      minMax: 'Min 2 / Max 6',
-      includes: ['Sessione di kite', 'Attrezzatura', 'Fotografia professionale', 'Cena'],
-      note: 'La fotografia è inclusa — non opzionale. Lo scatto al tramonto È il prodotto.',
+      tagline: 'Esperienza giornata intera',
+      badge: 'In evidenza',
+      duration: '9 ore',
+      includesList: ['Attrezzatura', 'Trasporto', 'Esperienza giornata intera'],
       description:
-        'Il vento cala. Il cielo si fa dorato. Le montagne inghiottono il sole intero — e tu sei ancora sull’acqua quando succede.',
+        '9 ore a Ghost Bay, inclusi attrezzatura, trasporto e l’esperienza giornata intera.',
     },
     {
-      badge: 'Intermedio+',
-      distance: '~22–25 km sull’acqua',
-      duration: '2–3 ore',
-      level: 'Solo da intermedio ad avanzato',
-      includes: ['Guida', 'Barca di sicurezza (obbligatoria)', 'Trasporto di ritorno'],
-    },
-    {
-      name: 'Gite alle isole',
+      name: 'White Island',
+      tagline: 'Gite alle isole',
       tiers: [
         {
           name: 'Giornata kite sull’isola',
@@ -128,7 +126,7 @@ export default {
         },
       ],
     },
-  ],
+    ],
   experienceTeasers: [
     { title: 'Gite alle isole', desc: 'Due isole del Mar Rosso a settimana — motoscafo, snorkeling, mare aperto.' },
     { title: 'Cavalli & mare', desc: 'Cavalca i cavalli nel Mar Rosso, le montagne alle spalle.' },

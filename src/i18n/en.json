@@ -6,7 +6,9 @@
     "programs": "Courses",
     "about": "About",
     "book": "Book",
-    "bookNow": "Book Now"
+    "bookNow": "Book Now",
+    "standalone": "Standalone Experiences",
+    "safari": "Safari"
   },
   "cta": {
     "seePackages": "See Packages",
@@ -20,7 +22,8 @@
     "policies": "Guest Policies",
     "moreInfo": "For more info — Contact us",
     "coursesEyebrow": "Set Sail",
-    "checkCourses": "Check Our Courses"
+    "checkCourses": "Check Our Courses",
+    "viewExperiences": "View All Experiences"
   },
   "common": {
     "from": "from",
@@ -36,7 +39,8 @@
     "group": "Group",
     "duration": "Duration",
     "level": "Level",
-    "loading": "Loading…"
+    "loading": "Loading…",
+    "price": "Price"
   },
   "home": {
     "eyebrow": "Hurghada · Red Sea · Egypt",
@@ -53,7 +57,11 @@
     "programsWing": "Wing Foil",
     "programsDay": "Day Experiences",
     "scarcityTitle": "LIMITED TO 10 PIRATES PER WEEK.",
-    "scarcitySub": "Peak season fills fast. Don't miss your spot on the water."
+    "scarcitySub": "Peak season fills fast. Don't miss your spot on the water.",
+    "rentalTitle": "EQUIPMENT RENTAL",
+    "rentalSub": "Bring your skills. We bring the gear.",
+    "standaloneTitle": "STANDALONE EXPERIENCES",
+    "standaloneSub": "Big days on the Red Sea."
   },
   "experience": {
     "title": "THIS ISN'T A HOLIDAY. IT'S AN ADVENTURE.",
@@ -176,5 +184,20 @@
     "title": "OFF THE MAP",
     "sub": "This page drifted out to sea. Let's get you back to the crew.",
     "home": "Back to Home"
+  },
+  "standalone": {
+    "title": "STANDALONE EXPERIENCES",
+    "sub": "Come for a day. Ride the Red Sea."
+  },
+  "safari": {
+    "title": "SAFARI PACKAGES",
+    "sub": "Desert and sea, the Pirates way.",
+    "startingFrom": "Starting from",
+    "note": "For dates and more information, please contact us.",
+    "highlights": [
+      "Multi-day desert & Red Sea adventure",
+      "Guided by the Kite Pirates crew",
+      "Tailored to your group and dates"
+    ]
   }
 }

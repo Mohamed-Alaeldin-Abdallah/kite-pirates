@@ -5,7 +5,7 @@ import { Globe, Check } from 'lucide-react';
 import { LOCALES } from '../i18n';
 import { stripLocale, localizePath } from '../lib/locale';
 
-export default function LanguageSelector({ compact = false }) {
+export default function LanguageSelector({ compact = false, onDark = false }) {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
@@ -34,21 +34,25 @@ export default function LanguageSelector({ compact = false }) {
   if (compact) {
     return (
       <div className="flex flex-wrap gap-2">
-        {LOCALES.map((l) => (
-          <button
-            key={l.code}
-            type="button"
-            onClick={() => choose(l.code)}
-            aria-pressed={current === l.code}
-            className={`rounded-full px-3 py-1.5 text-sm font-semibold transition-colors ${
-              current === l.code
-                ? 'bg-teal text-ink'
-                : 'text-gray-light hover:bg-dark-3 hover:text-ink'
-            }`}
-          >
-            {l.label}
-          </button>
-        ))}
+        {LOCALES.map((l) => {
+          const activeCls = onDark ? 'bg-white text-ocean' : 'bg-teal text-ink';
+          const idleCls = onDark
+            ? 'text-white/80 hover:bg-white/15 hover:text-white'
+            : 'text-gray-light hover:bg-dark-3 hover:text-ink';
+          return (
+            <button
+              key={l.code}
+              type="button"
+              onClick={() => choose(l.code)}
+              aria-pressed={current === l.code}
+              className={`rounded-full px-3 py-1.5 text-sm font-semibold transition-colors ${
+                current === l.code ? activeCls : idleCls
+              }`}
+            >
+              {l.label}
+            </button>
+          );
+        })}
       </div>
     );
   }

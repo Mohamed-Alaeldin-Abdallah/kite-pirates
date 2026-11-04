@@ -6,9 +6,9 @@ import { whatsappUrl, WHATSAPP_NUMBERS } from '../lib/config';
 
 // One WhatsApp bar with three language contacts: UK, Italy, Germany.
 const CONTACTS = [
-  { key: 'uk', flag: '🇬🇧', label: 'English', msg: "Hi Kite Pirates, I'd like to book a week" },
-  { key: 'it', flag: '🇮🇹', label: 'Italiano', msg: 'Ciao Kite Pirates, vorrei prenotare una settimana' },
-  { key: 'de', flag: '🇩🇪', label: 'Deutsch', msg: 'Hallo Kite Pirates, ich möchte eine Woche buchen' },
+  { key: 'uk', label: 'English', msg: "Hi Kite Pirates, I'd like to book a week" },
+  { key: 'it', label: 'Italiano', msg: 'Ciao Kite Pirates, vorrei prenotare una settimana' },
+  { key: 'de', label: 'Deutsch', msg: 'Hallo Kite Pirates, ich möchte eine Woche buchen' },
 ];
 
 export default function WhatsAppButton() {
@@ -34,7 +34,6 @@ export default function WhatsAppButton() {
                   onClick={() => setOpen(false)}
                   className="flex items-center gap-2 rounded-full border border-mid bg-white py-2 ps-3 pe-4 text-sm font-semibold text-ink transition-colors hover:border-teal hover:text-ocean"
                 >
-                  <span className="text-lg leading-none" aria-hidden="true">{c.flag}</span>
                   {c.label}
                 </a>
               </li>

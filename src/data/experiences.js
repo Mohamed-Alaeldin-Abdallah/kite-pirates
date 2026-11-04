@@ -1,31 +1,19 @@
 export const experiences = [
   {
-    name: 'Golden Hour',
-    icon: '🌇',
-    badge: 'Signature Experience',
-    price: '€190 pp',
-    duration: '3–4 hrs (late afternoon → sunset)',
-    level: 'All levels',
-    minMax: 'Min 2 / Max 6',
-    includes: ['Kite session', 'Equipment', 'Professional photography', 'Dinner'],
-    note: 'Photography is built in — not optional. The sunset shot IS the product.',
+    name: 'Ghost Bay',
+    tagline: 'Full-Day Experience',
+    icon: '🌅',
+    badge: 'Featured',
+    price: '€180',
+    duration: '9 hours',
+    includesList: ['Equipment', 'Transport', 'Full-day experience'],
     description:
-      "The wind drops. The sky turns gold. The mountains swallow the sun whole — and you're still on the water when it happens.",
+      '9 hours at Ghost Bay, including equipment, transport and the full-day experience.',
+    featured: true,
   },
   {
-    name: 'The Downwind Run',
-    icon: '💨',
-    badge: 'Intermediate+',
-    price: '€150 pp',
-    route: 'Kite Play Hurghada → Makadi Bay',
-    distance: '~22–25 km on the water',
-    duration: '2–3 hrs',
-    level: 'Intermediate to Advanced only',
-    includes: ['Guide', 'Safety boat escort (mandatory)', 'Return transport'],
-    addon: { label: 'Photography', price: 70 },
-  },
-  {
-    name: 'Island Trips',
+    name: 'White Island',
+    tagline: 'Island Trips',
     icon: '🏝️',
     tiers: [
       {

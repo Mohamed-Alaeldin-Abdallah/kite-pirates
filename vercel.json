@@ -22,8 +22,12 @@
     }
   ],
   "redirects": [
-    { "source": "/programs", "destination": "/courses", "permanent": true },
-    { "source": "/:lang/programs", "destination": "/:lang/courses", "permanent": true }
+    { "source": "/programs", "destination": "/standaloneexperince", "permanent": true },
+    { "source": "/:lang/programs", "destination": "/:lang/standaloneexperince", "permanent": true },
+    { "source": "/courses", "destination": "/standaloneexperince", "permanent": true },
+    { "source": "/:lang/courses", "destination": "/:lang/standaloneexperince", "permanent": true },
+    { "source": "/experience", "destination": "/standaloneexperince", "permanent": true },
+    { "source": "/:lang/experience", "destination": "/:lang/standaloneexperince", "permanent": true }
   ],
   "rewrites": [{ "source": "/((?!api/).*)", "destination": "/index.html" }]
 }

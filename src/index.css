@@ -182,3 +182,12 @@
     transform: scaleX(-1);
   }
 }
+
+/* Horizontal card slider — hide scrollbar, keep native swipe/scroll-snap */
+.kp-slider {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.kp-slider::-webkit-scrollbar {
+  display: none;
+}

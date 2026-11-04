@@ -6,7 +6,9 @@
     "programs": "Corsi",
     "about": "Chi siamo",
     "book": "Prenota",
-    "bookNow": "Prenota ora"
+    "bookNow": "Prenota ora",
+    "standalone": "Esperienze",
+    "safari": "Safari"
   },
   "cta": {
     "seePackages": "Vedi i pacchetti",
@@ -20,7 +22,8 @@
     "policies": "Condizioni per gli ospiti",
     "moreInfo": "Più info — Contattaci",
     "coursesEyebrow": "Salpa",
-    "checkCourses": "Scopri i nostri corsi"
+    "checkCourses": "Scopri i nostri corsi",
+    "viewExperiences": "Vedi tutte le esperienze"
   },
   "common": {
     "from": "da",
@@ -36,7 +39,8 @@
     "group": "Gruppo",
     "duration": "Durata",
     "level": "Livello",
-    "loading": "Caricamento…"
+    "loading": "Caricamento…",
+    "price": "Prezzo"
   },
   "home": {
     "eyebrow": "Hurghada · Mar Rosso · Egitto",
@@ -53,7 +57,11 @@
     "programsWing": "Wing Foil",
     "programsDay": "Esperienze giornaliere",
     "scarcityTitle": "MASSIMO 10 PIRATI A SETTIMANA.",
-    "scarcitySub": "L'alta stagione si riempie in fretta. Non perdere il tuo posto sull'acqua."
+    "scarcitySub": "L'alta stagione si riempie in fretta. Non perdere il tuo posto sull'acqua.",
+    "rentalTitle": "NOLEGGIO ATTREZZATURA",
+    "rentalSub": "Porta la tua tecnica. Al resto pensiamo noi.",
+    "standaloneTitle": "ESPERIENZE SINGOLE",
+    "standaloneSub": "Grandi giornate sul Mar Rosso."
   },
   "experience": {
     "title": "NON È UNA VACANZA. È UN'AVVENTURA.",
@@ -176,5 +184,20 @@
     "title": "FUORI DALLA MAPPA",
     "sub": "Questa pagina è andata alla deriva. Torniamo all'equipaggio.",
     "home": "Torna alla home"
+  },
+  "standalone": {
+    "title": "ESPERIENZE SINGOLE",
+    "sub": "Vieni per un giorno. Vivi il Mar Rosso."
+  },
+  "safari": {
+    "title": "PACCHETTI SAFARI",
+    "sub": "Deserto e mare, in stile Pirates.",
+    "startingFrom": "A partire da",
+    "note": "Per date e maggiori informazioni, contattaci.",
+    "highlights": [
+      "Avventura deserto & Mar Rosso di più giorni",
+      "Guidata dalla crew Kite Pirates",
+      "Su misura per il tuo gruppo e le tue date"
+    ]
   }
 }

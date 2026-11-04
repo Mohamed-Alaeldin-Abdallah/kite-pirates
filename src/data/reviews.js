@@ -9,7 +9,7 @@ export const reviews = [
 
 export const values = [
   { icon: '🏴‍☠️', title: 'FREEDOM', body: 'No rigid schedules. Your week runs at your pace.' },
-  { icon: '🤝', title: 'BROTHERHOOD', body: 'You arrive as a guest. You leave as crew.' },
+  { icon: '⚓', title: 'BROTHERHOOD', body: 'You arrive as a guest. You leave as crew.' },
   { icon: '🌊', title: 'RESPECT', body: 'For the ocean, the wind, and everyone who shows up.' },
 ];
 

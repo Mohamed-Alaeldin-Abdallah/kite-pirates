@@ -82,7 +82,7 @@ export const packages = [
   },
   {
     id: 'wing-captain',
-    icon: '🦅',
+    icon: '⛵',
     name: 'WING CAPTAIN WEEK',
     price: 2100,
     currency: 'EUR',

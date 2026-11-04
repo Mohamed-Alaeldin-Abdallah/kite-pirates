@@ -1,6 +1,12 @@
 // German content overlay — translated text only, mirroring the English data
 // order. Machine-translated; have a native speaker polish before final launch.
 export default {
+  rentals: [
+    { label: 'Halber Tag / 2 Std.' },
+    { label: '1 Tag / 4 Std.' },
+    { label: '3 Tage' },
+    { label: '1 Woche' },
+  ],
   packages: [
     {
       tagline: 'Für erfahrene Kiter, die mit leichtem Gepäck reisen',
@@ -95,24 +101,16 @@ export default {
   ],
   experiences: [
     {
-      badge: 'Signature-Erlebnis',
-      duration: '3–4 Std. (später Nachmittag → Sonnenuntergang)',
-      level: 'Alle Levels',
-      minMax: 'Min. 2 / Max. 6',
-      includes: ['Kite-Session', 'Ausrüstung', 'Professionelle Fotografie', 'Abendessen'],
-      note: 'Fotografie ist fest dabei — nicht optional. Der Sunset-Shot IST das Produkt.',
+      tagline: 'Ganztags-Erlebnis',
+      badge: 'Empfohlen',
+      duration: '9 Std.',
+      includesList: ['Ausrüstung', 'Transport', 'Ganztags-Erlebnis'],
       description:
-        'Der Wind lässt nach. Der Himmel wird golden. Die Berge verschlucken die Sonne ganz — und du bist noch auf dem Wasser, wenn es passiert.',
+        '9 Stunden in Ghost Bay, inklusive Ausrüstung, Transport und dem Ganztags-Erlebnis.',
     },
     {
-      badge: 'Fortgeschritten+',
-      distance: '~22–25 km auf dem Wasser',
-      duration: '2–3 Std.',
-      level: 'Nur Fortgeschrittene bis Profis',
-      includes: ['Guide', 'Begleitboot (Pflicht)', 'Rücktransport'],
-    },
-    {
-      name: 'Inseltrips',
+      name: 'White Island',
+      tagline: 'Inseltrips',
       tiers: [
         {
           name: 'Insel-Kitetag',
@@ -128,7 +126,7 @@ export default {
         },
       ],
     },
-  ],
+    ],
   experienceTeasers: [
     { title: 'Inseltrips', desc: 'Zwei Inseln im Roten Meer pro Woche — Speedboot, Schnorcheln, offenes Wasser.' },
     { title: 'Pferde & Meer', desc: 'Reite auf Pferden ins Rote Meer, die Berge im Rücken.' },

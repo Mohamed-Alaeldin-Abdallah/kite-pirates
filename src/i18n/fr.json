@@ -6,7 +6,9 @@
     "programs": "Cours",
     "about": "À propos",
     "book": "Réserver",
-    "bookNow": "Réserver"
+    "bookNow": "Réserver",
+    "standalone": "Expériences",
+    "safari": "Safari"
   },
   "cta": {
     "seePackages": "Voir les forfaits",
@@ -18,7 +20,8 @@
     "exploreExperience": "Découvrir l'expérience",
     "viewPackages": "Voir les forfaits",
     "policies": "Conditions clients",
-    "moreInfo": "Plus d'infos — Contacte-nous"
+    "moreInfo": "Plus d'infos — Contacte-nous",
+    "viewExperiences": "Voir toutes les expériences"
   },
   "common": {
     "from": "à partir de",
@@ -34,7 +37,8 @@
     "group": "Groupe",
     "duration": "Durée",
     "level": "Niveau",
-    "loading": "Chargement…"
+    "loading": "Chargement…",
+    "price": "Prix"
   },
   "home": {
     "eyebrow": "Hurghada · Mer Rouge · Égypte",
@@ -51,7 +55,11 @@
     "programsWing": "Wing Foil",
     "programsDay": "Expériences à la journée",
     "scarcityTitle": "LIMITÉ À 10 PIRATES PAR SEMAINE.",
-    "scarcitySub": "La haute saison se remplit vite. Ne rate pas ta place sur l'eau."
+    "scarcitySub": "La haute saison se remplit vite. Ne rate pas ta place sur l'eau.",
+    "rentalTitle": "LOCATION DE MATÉRIEL",
+    "rentalSub": "Apporte ton niveau. On apporte le matériel.",
+    "standaloneTitle": "EXPÉRIENCES À LA CARTE",
+    "standaloneSub": "De grandes journées en mer Rouge."
   },
   "experience": {
     "title": "CE N'EST PAS DES VACANCES. C'EST UNE AVENTURE.",
@@ -156,5 +164,20 @@
     "title": "HORS DE LA CARTE",
     "sub": "Cette page a dérivé vers le large. Retournons vers l'équipage.",
     "home": "Retour à l'accueil"
+  },
+  "standalone": {
+    "title": "EXPÉRIENCES À LA CARTE",
+    "sub": "Viens pour une journée. Ride la mer Rouge."
+  },
+  "safari": {
+    "title": "FORFAITS SAFARI",
+    "sub": "Désert et mer, façon Pirates.",
+    "startingFrom": "À partir de",
+    "note": "Pour les dates et plus d'informations, contacte-nous.",
+    "highlights": [
+      "Aventure désert & mer Rouge sur plusieurs jours",
+      "Encadré par la crew Kite Pirates",
+      "Adapté à ton groupe et à tes dates"
+    ]
   }
 }

@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from 'react';
-import { Routes, Route, useLocation, useParams } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 
@@ -13,9 +13,9 @@ import { localeFromPath, stripLocale } from './lib/locale';
 
 // Code-split every page (perf: keeps the initial bundle lean).
 const Home = lazy(() => import('./pages/Home'));
-const Experience = lazy(() => import('./pages/Experience'));
+const StandaloneExperiences = lazy(() => import('./pages/StandaloneExperiences'));
 const Packages = lazy(() => import('./pages/Packages'));
-const Programs = lazy(() => import('./pages/Programs'));
+const Safari = lazy(() => import('./pages/Safari'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Privacy = lazy(() => import('./pages/Privacy'));
@@ -23,13 +23,17 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 
 const PAGES = [
   { path: '', element: <Home /> },
-  { path: 'experience', element: <Experience /> },
+  { path: 'standaloneexperince', element: <StandaloneExperiences /> },
   { path: 'packages', element: <Packages /> },
-  { path: 'courses', element: <Programs /> },
+  { path: 'Safari', element: <Safari /> },
   { path: 'about', element: <About /> },
   { path: 'book', element: <Contact /> },
   { path: 'privacy', element: <Privacy /> },
 ];
+
+// Old routes that must 301 to the Standalone Experiences page (Vercel handles
+// this in production; these client routes cover in-app nav and dev).
+const REDIRECTS = ['courses', 'programs', 'experience'];
 
 function PageTransition({ children }) {
   const reduce = useReducedMotion();
@@ -50,6 +54,13 @@ function LangGuard({ children }) {
   const { lang } = useParams();
   if (!SUPPORTED.includes(lang)) return <NotFound />;
   return children;
+}
+
+/** Redirect preserving a locale prefix (/de/courses → /de/standaloneexperince). */
+function LocaleRedirect({ to }) {
+  const { lang } = useParams();
+  const prefix = SUPPORTED.includes(lang) && lang !== 'en' ? `/${lang}` : '';
+  return <Navigate to={`${prefix}/${to}`} replace />;
 }
 
 /** Keeps the active i18n language in sync with the URL locale prefix. */
@@ -76,7 +87,7 @@ export default function App() {
         <Suspense
           fallback={
             <div className="flex min-h-screen items-center justify-center">
-              <span className="font-display animate-pulse text-3xl uppercase tracking-widest text-teal">
+              <span className="font-display animate-pulse text-3xl uppercase tracking-widest text-ocean">
                 Kite Pirates
               </span>
             </div>
@@ -102,6 +113,23 @@ export default function App() {
                   }
                 />
               ))}
+
+              {/* Legacy → Standalone Experiences redirects */}
+              {REDIRECTS.map((old) => (
+                <Route
+                  key={`r-${old}`}
+                  path={`/${old}`}
+                  element={<Navigate to="/standaloneexperince" replace />}
+                />
+              ))}
+              {REDIRECTS.map((old) => (
+                <Route
+                  key={`rl-${old}`}
+                  path={`/:lang/${old}`}
+                  element={<LocaleRedirect to="standaloneexperince" />}
+                />
+              ))}
+
               <Route
                 path="*"
                 element={

@@ -8,9 +8,9 @@ import { TikTokIcon, WhatsAppIcon } from './BrandIcons';
 import ShareBar from './ShareBar';
 
 const LINKS = [
-  { to: '/experience', key: 'experience' },
+  { to: '/standaloneexperince', key: 'standalone' },
   { to: '/packages', key: 'packages' },
-  { to: '/courses', key: 'programs' },
+  { to: '/Safari', key: 'safari' },
   { to: '/about', key: 'about' },
   { to: '/book', key: 'book' },
 ];

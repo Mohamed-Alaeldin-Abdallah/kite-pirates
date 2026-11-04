@@ -12,6 +12,7 @@ import {
   noWindDays,
   featureSections,
 } from '../data/experiences';
+import { rentals } from '../data/rentals';
 import { faqs } from '../data/faqs';
 import { bookingFlow, cancellationPolicy, noWindPolicy, paymentMethods } from '../data/conditions';
 import { reviews, values, stats } from '../data/reviews';
@@ -28,6 +29,7 @@ import ru from '../data/content/ru';
 const OVERRIDES = { de, it, ar, fr, ru };
 
 const EN = {
+  rentals,
   packages,
   discounts,
   comparisonRows,

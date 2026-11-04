@@ -6,7 +6,9 @@
     "programs": "Kurse",
     "about": "Über uns",
     "book": "Buchen",
-    "bookNow": "Jetzt buchen"
+    "bookNow": "Jetzt buchen",
+    "standalone": "Einzel-Erlebnisse",
+    "safari": "Safari"
   },
   "cta": {
     "seePackages": "Pakete ansehen",
@@ -20,7 +22,8 @@
     "policies": "Gäste-Richtlinien",
     "moreInfo": "Mehr Infos — Kontaktiere uns",
     "coursesEyebrow": "Leinen los",
-    "checkCourses": "Unsere Kurse ansehen"
+    "checkCourses": "Unsere Kurse ansehen",
+    "viewExperiences": "Alle Erlebnisse ansehen"
   },
   "common": {
     "from": "ab",
@@ -36,7 +39,8 @@
     "group": "Gruppe",
     "duration": "Dauer",
     "level": "Level",
-    "loading": "Lädt…"
+    "loading": "Lädt…",
+    "price": "Preis"
   },
   "home": {
     "eyebrow": "Hurghada · Rotes Meer · Ägypten",
@@ -53,7 +57,11 @@
     "programsWing": "Wing Foil",
     "programsDay": "Tageserlebnisse",
     "scarcityTitle": "BEGRENZT AUF 10 PIRATEN PRO WOCHE.",
-    "scarcitySub": "Die Hauptsaison füllt sich schnell. Verpass deinen Platz auf dem Wasser nicht."
+    "scarcitySub": "Die Hauptsaison füllt sich schnell. Verpass deinen Platz auf dem Wasser nicht.",
+    "rentalTitle": "AUSRÜSTUNGSVERLEIH",
+    "rentalSub": "Bring dein Können. Wir bringen die Ausrüstung.",
+    "standaloneTitle": "EINZEL-ERLEBNISSE",
+    "standaloneSub": "Große Tage am Roten Meer."
   },
   "experience": {
     "title": "DAS IST KEIN URLAUB. DAS IST EIN ABENTEUER.",
@@ -176,5 +184,20 @@
     "title": "VON DER KARTE",
     "sub": "Diese Seite ist aufs Meer hinausgetrieben. Zurück zur Crew.",
     "home": "Zurück zur Startseite"
+  },
+  "standalone": {
+    "title": "EINZEL-ERLEBNISSE",
+    "sub": "Komm für einen Tag. Fahr das Rote Meer."
+  },
+  "safari": {
+    "title": "SAFARI-PAKETE",
+    "sub": "Wüste und Meer, auf Piraten-Art.",
+    "startingFrom": "Ab",
+    "note": "Für Termine und weitere Informationen kontaktiere uns bitte.",
+    "highlights": [
+      "Mehrtägiges Wüsten- & Rotes-Meer-Abenteuer",
+      "Geführt von der Kite-Pirates-Crew",
+      "Auf deine Gruppe und Termine zugeschnitten"
+    ]
   }
 }
