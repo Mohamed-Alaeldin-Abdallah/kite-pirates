@@ -58,7 +58,7 @@ export default function CardSlider({ children, label = 'Cards', className = '' }
     <div className={`relative ${className}`} role="region" aria-roledescription="carousel" aria-label={label}>
       <div
         ref={scroller}
-        className="kp-slider -mx-1 flex snap-x snap-mandatory gap-5 overflow-x-auto px-1 pb-2"
+        className="kp-slider -mx-1 flex snap-x snap-mandatory gap-5 overflow-x-auto px-1 pb-2 pt-4"
       >
         {items.map((child, i) => (
           <div key={i} data-slide className="w-[82%] shrink-0 snap-start sm:w-[46%] lg:w-[31%]">

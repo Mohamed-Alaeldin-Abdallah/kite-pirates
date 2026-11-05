@@ -168,13 +168,13 @@ export default function Home() {
               {t('home.packagesTitle')}
             </Display>
           </Reveal>
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {teaserPkgs.map((pkg, i) => (
-              <Reveal key={pkg.id} delay={i * 0.08}>
-                <PackageCard pkg={pkg} />
-              </Reveal>
-            ))}
-          </div>
+          <Reveal delay={0.06} className="mt-12">
+            <CardSlider label={t('home.packagesTitle')}>
+              {teaserPkgs.map((pkg) => (
+                <PackageCard key={pkg.id} pkg={pkg} />
+              ))}
+            </CardSlider>
+          </Reveal>
           <div className="mt-10">
             <BtnGhost to={lp('/packages')}>
               {t('cta.viewPackages')} <ArrowRight className="h-4 w-4 flip-rtl" aria-hidden="true" />
