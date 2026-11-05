@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Anchor, MessageCircle, Star, ArrowRight } from 'lucide-react';
+import { Anchor, MessageCircle, Star, ArrowRight, Instagram } from 'lucide-react';
 import Seo from '../components/Seo';
 import Reveal from '../components/Reveal';
 import { Display, Eyebrow, BtnPrimary, BtnGhost } from '../components/Primitives';
@@ -7,17 +7,19 @@ import CtaStrip from '../components/CtaStrip';
 import PackageCard from '../components/PackageCard';
 import CourseCard from '../components/CourseCard';
 import CardSlider from '../components/CardSlider';
+import RentalTable from '../components/RentalTable';
 import WindCards from '../components/WindCards';
 import { pageMeta } from '../seo/meta';
 import { organizationSchema } from '../seo/schemas';
-import { whatsappUrl } from '../lib/config';
+import { whatsappUrl, SOCIAL } from '../lib/config';
 import { useLocale } from '../hooks/useLocale';
 import { useContent } from '../hooks/useContent';
 
 export default function Home() {
   const { t } = useTranslation();
   const { lp } = useLocale();
-  const { stats, reviews, packages, kiteCourses, wingCourses, courseNotes } = useContent();
+  const { stats, reviews, packages, rentals, kiteCourses, wingCourses, courseNotes } =
+    useContent();
   const teaserPkgs = packages.filter((p) => ['mate', 'pirate', 'captain'].includes(p.id));
 
   return (
@@ -35,7 +37,7 @@ export default function Home() {
               <Eyebrow className="mb-5">{t('home.eyebrow')}</Eyebrow>
             </Reveal>
             <Reveal delay={0.06}>
-              <Display as="h1" className="max-w-3xl text-balance text-6xl text-ink sm:text-7xl md:text-8xl">
+              <Display as="h1" className="max-w-3xl text-balance text-4xl text-ink sm:text-6xl md:text-7xl">
                 {t('home.title')}
               </Display>
             </Reveal>
@@ -51,6 +53,10 @@ export default function Home() {
                 <BtnGhost href={whatsappUrl(t('whatsapp.prefill'))} external>
                   <MessageCircle className="h-5 w-5" aria-hidden="true" />
                   {t('cta.whatsappNow')}
+                </BtnGhost>
+                <BtnGhost href={SOCIAL.instagram} external>
+                  <Instagram className="h-5 w-5" aria-hidden="true" />
+                  {t('cta.instagram')}
                 </BtnGhost>
               </div>
             </Reveal>
@@ -134,6 +140,21 @@ export default function Home() {
                 <CourseCard key={c.name} course={c} icon="🏄" />
               ))}
             </CardSlider>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* EQUIPMENT RENTAL PRICING */}
+      <section className="section border-y border-mid bg-dark-3">
+        <div className="container-px mx-auto max-w-content">
+          <Reveal>
+            <Eyebrow>{t('home.rentalSub')}</Eyebrow>
+            <Display as="h2" className="mt-3 text-4xl text-ink sm:text-5xl">
+              {t('home.rentalTitle')}
+            </Display>
+          </Reveal>
+          <Reveal delay={0.08} className="mt-10">
+            <RentalTable rentals={rentals} labelDuration={t('common.duration')} labelPrice={t('common.price')} />
           </Reveal>
         </div>
       </section>

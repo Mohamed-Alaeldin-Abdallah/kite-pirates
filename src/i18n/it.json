@@ -23,7 +23,8 @@
     "moreInfo": "Più info — Contattaci",
     "coursesEyebrow": "Salpa",
     "checkCourses": "Scopri i nostri corsi",
-    "viewExperiences": "Vedi tutte le esperienze"
+    "viewExperiences": "Vedi tutte le esperienze",
+    "instagram": "Segui l'equipaggio"
   },
   "common": {
     "from": "da",
@@ -44,8 +45,8 @@
   },
   "home": {
     "eyebrow": "Hurghada · Mar Rosso · Egitto",
-    "title": "IL MAR ROSSO TI CHIAMA. CI SEI?",
-    "sub": "Una settimana. Un equipaggio. Un'esperienza di cui non smetterai mai di parlare.",
+    "title": "Quando i pirati chiamano, l'equipaggio risponde",
+    "sub": "Kitesurf Hurghada · Lezioni di kite sul Mar Rosso · Wing foil Egitto · Corsi di kite · Kite safari Mar Rosso",
     "statementQuote": "Kite Pirates non è una scuola di kite. È un equipaggio. Cavalchiamo il Mar Rosso, scopriamo lagune nascoste che la mappa non mostra, mangiamo insieme e ci spingiamo a vicenda sull'acqua. Che tu stia toccando un kite per la prima volta o inseguendo il tuo prossimo trick — qui è il tuo posto. Questa è Hurghada come la vivono i locali. Selvaggia, calda, completamente libera.",
     "experienceTitle": "MOLTO PIÙ DEL KITE",
     "experienceSub": "L'acqua è solo l'inizio.",
@@ -144,7 +145,8 @@
   },
   "whatsapp": {
     "aria": "Chatta con Kite Pirates su WhatsApp",
-    "prefill": "Ciao Kite Pirates, vorrei prenotare una settimana"
+    "prefill": "Ciao Kite Pirates, vorrei prenotare una settimana",
+    "close": "Chiudi il menu WhatsApp"
   },
   "wind": {
     "live": "Live",

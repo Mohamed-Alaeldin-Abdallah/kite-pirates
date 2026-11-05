@@ -23,7 +23,8 @@
     "moreInfo": "For more info — Contact us",
     "coursesEyebrow": "Set Sail",
     "checkCourses": "Check Our Courses",
-    "viewExperiences": "View All Experiences"
+    "viewExperiences": "View All Experiences",
+    "instagram": "Follow the Crew"
   },
   "common": {
     "from": "from",
@@ -44,8 +45,8 @@
   },
   "home": {
     "eyebrow": "Hurghada · Red Sea · Egypt",
-    "title": "THE RED SEA IS CALLING. ARE YOU IN?",
-    "sub": "One week. One crew. One experience you'll never stop talking about.",
+    "title": "When Pirates Call, the Crew Answers",
+    "sub": "Kitesurfing Hurghada · Kite lessons on the Red Sea · Wing foil Egypt · Kite courses · Red Sea kite safari",
     "statementQuote": "Kite Pirates isn't a kite school. It's a crew. We ride the Red Sea, discover hidden lagoons the map doesn't show, eat together, and push each other on the water. Whether you're touching a kite for the first time or hunting your next trick — you belong here. This is Hurghada the way locals live it. Wild, warm, completely free.",
     "experienceTitle": "MORE THAN KITING",
     "experienceSub": "The water is only the beginning.",
@@ -144,7 +145,8 @@
   },
   "whatsapp": {
     "aria": "Chat with Kite Pirates on WhatsApp",
-    "prefill": "Hi Kite Pirates, I'd like to book a week"
+    "prefill": "Hi Kite Pirates, I'd like to book a week",
+    "close": "Close WhatsApp menu"
   },
   "wind": {
     "live": "Live",

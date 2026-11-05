@@ -23,7 +23,8 @@
     "moreInfo": "Mehr Infos — Kontaktiere uns",
     "coursesEyebrow": "Leinen los",
     "checkCourses": "Unsere Kurse ansehen",
-    "viewExperiences": "Alle Erlebnisse ansehen"
+    "viewExperiences": "Alle Erlebnisse ansehen",
+    "instagram": "Folge der Crew"
   },
   "common": {
     "from": "ab",
@@ -44,8 +45,8 @@
   },
   "home": {
     "eyebrow": "Hurghada · Rotes Meer · Ägypten",
-    "title": "DAS ROTE MEER RUFT. BIST DU DABEI?",
-    "sub": "Eine Woche. Eine Crew. Ein Erlebnis, von dem du nie aufhörst zu erzählen.",
+    "title": "Wenn Piraten rufen, antwortet die Crew",
+    "sub": "Kitesurfen Hurghada · Kitekurse am Roten Meer · Wing Foil Ägypten · Kiteschule · Kite-Safari Rotes Meer",
     "statementQuote": "Kite Pirates ist keine Kiteschule. Es ist eine Crew. Wir reiten das Rote Meer, entdecken versteckte Lagunen, die keine Karte zeigt, essen zusammen und pushen uns gegenseitig auf dem Wasser. Ob du zum ersten Mal einen Kite anfasst oder deinen nächsten Trick jagst — hier gehörst du dazu. Das ist Hurghada, wie es die Einheimischen leben. Wild, warm, völlig frei.",
     "experienceTitle": "MEHR ALS KITEN",
     "experienceSub": "Das Wasser ist erst der Anfang.",
@@ -144,7 +145,8 @@
   },
   "whatsapp": {
     "aria": "Mit Kite Pirates über WhatsApp chatten",
-    "prefill": "Hallo Kite Pirates, ich möchte eine Woche buchen"
+    "prefill": "Hallo Kite Pirates, ich möchte eine Woche buchen",
+    "close": "WhatsApp-Menü schließen"
   },
   "wind": {
     "live": "Live",

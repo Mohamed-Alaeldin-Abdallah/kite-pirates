@@ -21,7 +21,8 @@
     "viewPackages": "Voir les forfaits",
     "policies": "Conditions clients",
     "moreInfo": "Plus d'infos — Contacte-nous",
-    "viewExperiences": "Voir toutes les expériences"
+    "viewExperiences": "Voir toutes les expériences",
+    "instagram": "Suis l'équipage"
   },
   "common": {
     "from": "à partir de",
@@ -42,8 +43,8 @@
   },
   "home": {
     "eyebrow": "Hurghada · Mer Rouge · Égypte",
-    "title": "LA MER ROUGE T'APPELLE. TU EN ES ?",
-    "sub": "Une semaine. Un équipage. Une expérience dont tu ne cesseras de parler.",
+    "title": "Quand les pirates appellent, l'équipage répond",
+    "sub": "Kitesurf Hurghada · Cours de kite en mer Rouge · Wing foil Égypte · Cours de kite · Kite safari mer Rouge",
     "statementQuote": "Kite Pirates n'est pas une école de kite. C'est un équipage. On surfe la Mer Rouge, on découvre des lagons cachés que la carte ne montre pas, on mange ensemble et on se pousse mutuellement sur l'eau. Que tu touches un kite pour la première fois ou que tu cherches ton prochain trick — ta place est ici. C'est Hurghada comme la vivent les locaux. Sauvage, chaleureuse, totalement libre.",
     "experienceTitle": "BIEN PLUS QUE LE KITE",
     "experienceSub": "L'eau n'est que le début.",
@@ -142,7 +143,8 @@
   },
   "whatsapp": {
     "aria": "Discuter avec Kite Pirates sur WhatsApp",
-    "prefill": "Bonjour Kite Pirates, je souhaite réserver une semaine"
+    "prefill": "Bonjour Kite Pirates, je souhaite réserver une semaine",
+    "close": "Fermer le menu WhatsApp"
   },
   "wind": {
     "live": "En direct",
