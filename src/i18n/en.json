@@ -45,7 +45,7 @@
   },
   "home": {
     "eyebrow": "Hurghada · Red Sea · Egypt",
-    "title": "When Pirates Call, the Crew Answers",
+    "title": "When the Wind Calls, the Pirates Must Answer",
     "sub": "Kitesurfing Hurghada · Kite lessons on the Red Sea · Wing foil Egypt · Kite courses · Red Sea kite safari",
     "statementQuote": "Kite Pirates isn't a kite school. It's a crew. We ride the Red Sea, discover hidden lagoons the map doesn't show, eat together, and push each other on the water. Whether you're touching a kite for the first time or hunting your next trick — you belong here. This is Hurghada the way locals live it. Wild, warm, completely free.",
     "experienceTitle": "MORE THAN KITING",
@@ -59,7 +59,7 @@
     "programsDay": "Day Experiences",
     "scarcityTitle": "LIMITED TO 10 PIRATES PER WEEK.",
     "scarcitySub": "Peak season fills fast. Don't miss your spot on the water.",
-    "rentalTitle": "EQUIPMENT RENTAL",
+    "rentalTitle": "KITE EQUIPMENT RENTAL",
     "rentalSub": "Bring your skills. We bring the gear.",
     "standaloneTitle": "STANDALONE EXPERIENCES",
     "standaloneSub": "Big days on the Red Sea."
@@ -79,7 +79,7 @@
   "programs": {
     "title": "COURSES & DAY EXPERIENCES",
     "sub": "Come for a session. Stay for the Red Sea.",
-    "kiteTitle": "KITE COURSES",
+    "kiteTitle": "KITE LESSONS",
     "wingTitle": "WING FOIL COURSES",
     "experiencesTitle": "STANDALONE EXPERIENCES"
   },

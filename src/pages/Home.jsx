@@ -26,61 +26,60 @@ export default function Home() {
     <>
       <Seo meta={pageMeta.home} schemas={[organizationSchema()]} />
 
-      {/* HERO */}
+      {/* HERO — full-bleed background photo, intro + CTAs over the image */}
       <section
-        className="border-b border-mid bg-white"
-        style={{ paddingTop: 'calc(var(--nav-height) + clamp(40px, 7vw, 72px))' }}
+        className="relative isolate flex min-h-[90svh] items-center overflow-hidden"
+        style={{ paddingTop: 'var(--nav-height)' }}
       >
-        <div className="container-px mx-auto grid max-w-content items-center gap-12 pb-[clamp(48px,8vw,88px)] lg:grid-cols-[1.05fr_0.95fr]">
-          <div>
-            <Reveal>
-              <Eyebrow className="mb-5">{t('home.eyebrow')}</Eyebrow>
-            </Reveal>
-            <Reveal delay={0.06}>
-              <Display as="h1" className="max-w-3xl text-balance text-4xl text-ink sm:text-6xl md:text-7xl">
-                {t('home.title')}
-              </Display>
-            </Reveal>
-            <Reveal delay={0.12}>
-              <p className="mt-6 max-w-xl text-lg text-gray-light">{t('home.sub')}</p>
-            </Reveal>
-            <Reveal delay={0.18}>
-              <div className="mt-9 flex flex-wrap gap-4">
-                <BtnPrimary to={lp('/book')}>
-                  <Anchor className="h-5 w-5" aria-hidden="true" />
-                  {t('nav.bookNow')}
-                </BtnPrimary>
-                <BtnGhost href={whatsappUrl(t('whatsapp.prefill'))} external>
-                  <MessageCircle className="h-5 w-5" aria-hidden="true" />
-                  {t('cta.whatsappNow')}
-                </BtnGhost>
-                <BtnGhost href={SOCIAL.instagram} external>
-                  <Instagram className="h-5 w-5" aria-hidden="true" />
-                  {t('cta.instagram')}
-                </BtnGhost>
-              </div>
-            </Reveal>
-          </div>
+        <img
+          src="/images/hero.jpeg"
+          alt="Kite surfing on the Red Sea in Hurghada"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink/85 via-ink/55 to-ink/40" />
 
-          <Reveal delay={0.12} direction="left">
-            <img
-              src="/images/hero.jpeg"
-              alt="Kite surfing on the Red Sea in Hurghada"
-              className="aspect-[4/3] w-full rounded-lg border border-mid object-cover lg:aspect-[4/5]"
-              fetchPriority="high"
-            />
+        <div className="container-px mx-auto w-full max-w-content py-20">
+          <Reveal>
+            <span className="inline-block font-body text-[13px] font-semibold uppercase tracking-[0.1em] text-aqua">
+              {t('home.eyebrow')}
+            </span>
+          </Reveal>
+          <Reveal delay={0.06}>
+            <Display as="h1" className="mt-5 max-w-3xl text-balance text-4xl text-white sm:text-6xl md:text-7xl">
+              {t('home.title')}
+            </Display>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <p className="mt-6 max-w-xl text-base text-white/85 sm:text-lg">{t('home.sub')}</p>
+          </Reveal>
+          <Reveal delay={0.18}>
+            <div className="mt-9 flex flex-wrap gap-3 sm:gap-4">
+              <BtnPrimary to={lp('/book')}>
+                <Anchor className="h-5 w-5" aria-hidden="true" />
+                {t('nav.bookNow')}
+              </BtnPrimary>
+              <BtnGhost href={whatsappUrl(t('whatsapp.prefill'))} external onPhoto>
+                <MessageCircle className="h-5 w-5" aria-hidden="true" />
+                {t('cta.whatsappNow')}
+              </BtnGhost>
+              <BtnGhost href={SOCIAL.instagram} external onPhoto>
+                <Instagram className="h-5 w-5" aria-hidden="true" />
+                {t('cta.instagram')}
+              </BtnGhost>
+            </div>
           </Reveal>
         </div>
       </section>
 
       {/* STATS */}
       <section className="border-b border-mid bg-dark-3">
-        <div className="container-px mx-auto grid max-w-content gap-6 py-14 sm:grid-cols-3">
+        <div className="container-px mx-auto grid max-w-content grid-cols-3 gap-3 py-10 sm:gap-6 sm:py-14">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.08} className="text-center sm:text-start">
-              <p className="font-display text-5xl text-ocean">{s.value}</p>
-              <p className="mt-1 font-display text-lg uppercase text-ink">{s.label}</p>
-              <p className="mt-1 text-sm text-gray-light">{s.desc}</p>
+              <p className="font-display text-3xl text-ocean sm:text-5xl">{s.value}</p>
+              <p className="mt-1 font-display text-sm uppercase text-ink sm:text-lg">{s.label}</p>
+              <p className="mt-1 text-xs text-gray-light sm:text-sm">{s.desc}</p>
             </Reveal>
           ))}
         </div>
@@ -137,7 +136,7 @@ export default function Home() {
           <Reveal delay={0.06} className="mt-10">
             <CardSlider label={t('programs.wingTitle')}>
               {wingCourses.map((c) => (
-                <CourseCard key={c.name} course={c} icon="🏄" />
+                <CourseCard key={c.name} course={c} icon="🪽" />
               ))}
             </CardSlider>
           </Reveal>

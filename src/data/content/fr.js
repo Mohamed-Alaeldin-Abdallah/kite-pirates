@@ -112,29 +112,26 @@ export default {
       name: 'White Island',
       tagline: 'Sorties aux îles',
       tiers: [
-        {
-          name: "Journée kite sur l'île",
-          duration: 'Journée entière',
-          includes:
-            "Kiter 210 € · non-kiter 140 € par personne. Journée entière de kite sur l'île — équipement de kite et de snorkeling inclus. Groupe max 7. Réduction groupe de 20 %.",
-        },
-        {
-          name: 'Île privée + BBQ',
-          duration: 'Journée entière',
-          includes:
-            "Journée entière de kite & snorkeling + BBQ sur la plage. Location d'équipement 70 € par personne. Groupe max 5.",
-        },
+        { name: 'Sortie 4 heures', duration: '4 h', includes: 'Équipement de kite & snorkeling inclus.' },
+        { name: 'Journée entière', duration: '8 h', includes: 'Journée entière sur l’île — équipement de kite & snorkeling inclus.' },
       ],
     },
+    {
+      tagline: 'Expérience signature',
+      badge: 'Coucher de soleil',
+      duration: '3–4 h',
+      includesList: ['Session de kite', 'Équipement', 'Photographie', 'Dîner'],
+      description:
+        'Une session en fin d’après-midi jusqu’au coucher du soleil — l’heure dorée sur l’eau. Photographie incluse, dîner ensuite.',
+    },
+    {
+      tagline: 'Intermédiaire+',
+      duration: '2–3 h',
+      includesList: ['Guide', 'Bateau de sécurité', 'Transport retour'],
+      description:
+        'Un downwind guidé de Kite Play Hurghada à Makadi Bay — environ 22–25 km sur l’eau. Intermédiaires à avancés uniquement.',
+    },
     ],
-  experienceTeasers: [
-    { title: 'Sorties aux îles', desc: 'Deux îles de la mer Rouge par semaine — bateau rapide, snorkeling, eau libre.' },
-    { title: 'Chevaux & mer', desc: 'Monte à cheval dans la mer Rouge, les montagnes dans le dos.' },
-    { title: 'Lagunes cachées', desc: "De l'eau libre qu'aucune carte ne montre. Silence, montagnes, aucune foule." },
-    { title: 'Golden Hour', desc: "Session tardive jusqu'au coucher du soleil. Photographie incluse. Dîner ensuite." },
-    { title: 'Downwind Run', desc: "22 km sur l'eau de Hurghada à Makadi Bay. Bateau de sécurité." },
-    { title: 'Orange Bay', desc: 'Bateau rapide vers des eaux turquoise peu profondes — arrêts snorkeling, déjeuner, temps plage.' },
-  ],
   pirateDay: [
     { time: 'Matin', body: "Réveil au bord de l'eau. Petit-déjeuner avec la crew. On check le vent." },
     { time: 'Sur le spot', body: "Lagune ouverte, montagnes derrière, mer devant. On s'équipe, pas de files." },

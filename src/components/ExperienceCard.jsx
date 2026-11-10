@@ -36,9 +36,19 @@ export default function ExperienceCard({ exp, featured }) {
         isFeatured ? 'border-teal' : 'border-mid hover:border-teal'
       }`}
     >
-      <div className={`flex h-40 items-center justify-center border-b border-mid ${isFeatured ? 'bg-teal/10' : 'bg-dark-3'}`}>
-        <span className="text-5xl" aria-hidden="true">{exp.icon}</span>
-      </div>
+      {exp.image ? (
+        <img
+          src={exp.image}
+          alt={exp.name}
+          loading="lazy"
+          decoding="async"
+          className="h-44 w-full border-b border-mid object-cover"
+        />
+      ) : (
+        <div className={`flex h-40 items-center justify-center border-b border-mid ${isFeatured ? 'bg-teal/10' : 'bg-dark-3'}`}>
+          <span className="text-5xl" aria-hidden="true">{exp.icon}</span>
+        </div>
+      )}
 
       <div className="flex flex-1 flex-col p-6">
         <div className="mb-1 flex items-start justify-between gap-2">

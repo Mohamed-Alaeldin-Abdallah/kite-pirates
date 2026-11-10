@@ -112,29 +112,26 @@ export default {
       name: 'White Island',
       tagline: 'Inseltrips',
       tiers: [
-        {
-          name: 'Insel-Kitetag',
-          duration: 'Ganzer Tag',
-          includes:
-            'Kiter 210 € · Nicht-Kiter 140 € pro Person. Ganztägiges Kiten auf der Insel — Kite-Ausrüstung & Schnorchelausrüstung inklusive. Gruppe max. 7. 20 % Gruppenrabatt.',
-        },
-        {
-          name: 'Private Insel + BBQ',
-          duration: 'Ganzer Tag',
-          includes:
-            'Ganztägiges Kiten & Schnorcheln + Strand-BBQ. Ausrüstungsverleih 70 € pro Person. Gruppe max. 5.',
-        },
+        { name: '4-Stunden-Trip', duration: '4 Std.', includes: 'Kite- & Schnorchelausrüstung inklusive.' },
+        { name: 'Ganzer Tag', duration: '8 Std.', includes: 'Ganzer Tag auf der Insel — Kite- & Schnorchelausrüstung inklusive.' },
       ],
     },
+    {
+      tagline: 'Signature-Erlebnis',
+      badge: 'Sonnenuntergang',
+      duration: '3–4 Std.',
+      includesList: ['Kite-Session', 'Ausrüstung', 'Fotografie', 'Abendessen'],
+      description:
+        'Eine Session am späten Nachmittag bis zum Sonnenuntergang — die goldene Stunde auf dem Wasser. Fotografie ist fest dabei, Abendessen danach.',
+    },
+    {
+      tagline: 'Fortgeschritten+',
+      duration: '2–3 Std.',
+      includesList: ['Guide', 'Begleitboot', 'Rücktransport'],
+      description:
+        'Ein geführter Downwind von Kite Play Hurghada nach Makadi Bay — rund 22–25 km auf dem Wasser. Nur Fortgeschrittene bis Profis.',
+    },
     ],
-  experienceTeasers: [
-    { title: 'Inseltrips', desc: 'Zwei Inseln im Roten Meer pro Woche — Speedboot, Schnorcheln, offenes Wasser.' },
-    { title: 'Pferde & Meer', desc: 'Reite auf Pferden ins Rote Meer, die Berge im Rücken.' },
-    { title: 'Versteckte Lagunen', desc: 'Offenes Wasser, das keine Karte zeigt. Stille, Berge, keine Menschenmassen.' },
-    { title: 'Golden Hour', desc: 'Späte Session bis zum Sonnenuntergang. Fotografie inklusive. Abendessen danach.' },
-    { title: 'Downwind Run', desc: '22 km auf dem Wasser von Hurghada bis Makadi Bay. Begleitboot.' },
-    { title: 'Orange Bay', desc: 'Speedboot zu türkisem Flachwasser — Schnorchelstopps, Mittagessen, Strandzeit.' },
-  ],
   pirateDay: [
     { time: 'Morgen', body: 'Aufwachen am Wasser. Frühstück mit der Crew. Wind checken.' },
     { time: 'Am Spot', body: 'Offene Lagune, Berge hinten, Meer vorn. Gear an, keine Schlangen.' },

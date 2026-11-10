@@ -112,29 +112,26 @@ export default {
       name: 'White Island',
       tagline: 'Gite alle isole',
       tiers: [
-        {
-          name: 'Giornata kite sull’isola',
-          duration: 'Giornata intera',
-          includes:
-            'Kiter 210 € · non-kiter 140 € a persona. Giornata intera di kite sull’isola — attrezzatura kite e snorkeling incluse. Gruppo max 7. Sconto gruppo 20%.',
-        },
-        {
-          name: 'Isola privata + BBQ',
-          duration: 'Giornata intera',
-          includes:
-            'Giornata intera di kite e snorkeling + BBQ in spiaggia. Noleggio attrezzatura 70 € a persona. Gruppo max 5.',
-        },
+        { name: 'Uscita di 4 ore', duration: '4 ore', includes: 'Attrezzatura kite e snorkeling inclusa.' },
+        { name: 'Giornata intera', duration: '8 ore', includes: 'Giornata intera sull’isola — attrezzatura kite e snorkeling inclusa.' },
       ],
     },
+    {
+      tagline: 'Esperienza signature',
+      badge: 'Tramonto',
+      duration: '3–4 ore',
+      includesList: ['Sessione di kite', 'Attrezzatura', 'Fotografia', 'Cena'],
+      description:
+        'Una sessione nel tardo pomeriggio fino al tramonto — l’ora dorata sull’acqua. Fotografia inclusa, cena dopo.',
+    },
+    {
+      tagline: 'Intermedio+',
+      duration: '2–3 ore',
+      includesList: ['Guida', 'Barca di sicurezza', 'Trasporto di ritorno'],
+      description:
+        'Un downwind guidato da Kite Play Hurghada a Makadi Bay — circa 22–25 km sull’acqua. Solo da intermedio ad avanzato.',
+    },
     ],
-  experienceTeasers: [
-    { title: 'Gite alle isole', desc: 'Due isole del Mar Rosso a settimana — motoscafo, snorkeling, mare aperto.' },
-    { title: 'Cavalli & mare', desc: 'Cavalca i cavalli nel Mar Rosso, le montagne alle spalle.' },
-    { title: 'Lagune nascoste', desc: 'Acqua aperta che la mappa non mostra. Silenzio, montagne, niente folla.' },
-    { title: 'Golden Hour', desc: 'Sessione serale fino al tramonto. Fotografia inclusa. Cena dopo.' },
-    { title: 'Downwind Run', desc: '22 km sull’acqua da Hurghada a Makadi Bay. Barca di sicurezza.' },
-    { title: 'Orange Bay', desc: 'Motoscafo verso bassi fondali turchesi — soste snorkeling, pranzo, spiaggia.' },
-  ],
   pirateDay: [
     { time: 'Mattina', body: 'Svegliati vicino all’acqua. Colazione con la crew. Controlla il vento.' },
     { time: 'Allo spot', body: 'Laguna aperta, montagne dietro, mare davanti. Pronti, niente code.' },

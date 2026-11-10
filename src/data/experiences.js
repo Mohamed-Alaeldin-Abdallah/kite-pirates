@@ -4,6 +4,7 @@ export const experiences = [
     tagline: 'Full-Day Experience',
     icon: '🌅',
     badge: 'Featured',
+    image: '/images/ghost-bay.jpeg',
     price: '€180',
     duration: '9 hours',
     includesList: ['Equipment', 'Transport', 'Full-day experience'],
@@ -15,22 +16,42 @@ export const experiences = [
     name: 'White Island',
     tagline: 'Island Trips',
     icon: '🏝️',
+    image: '/images/white-island.jpeg',
     tiers: [
       {
-        name: 'Island Kite Day',
-        price: '€210 / €140',
-        duration: 'Full day',
-        includes:
-          'Kiter €210 · non-kiter €140 per person. Full day kiting on the island — kite equipment & snorkeling gear included. Group max 7. 20% group-booking discount.',
+        name: '4-Hour Trip',
+        price: 'from €150',
+        duration: '4 hours',
+        includes: 'Kite equipment & snorkeling gear included.',
       },
       {
-        name: 'Private Island + BBQ',
-        price: '€550 total',
-        duration: 'Full day',
-        includes:
-          'Full day kiting & snorkeling + beach BBQ. Equipment rental €70 per person. Group max 5.',
+        name: 'Full Day',
+        price: 'from €280',
+        duration: '8 hours',
+        includes: 'Full day on the island — kite equipment & snorkeling included.',
       },
     ],
+  },
+  {
+    name: 'Golden Hour',
+    tagline: 'Signature Experience',
+    icon: '🌇',
+    badge: 'Sunset',
+    price: '€190',
+    duration: '3–4 hrs',
+    includesList: ['Kite session', 'Equipment', 'Photography', 'Dinner'],
+    description:
+      'A late-afternoon session ending at sunset — the gold hour on the water. Photography is built in, dinner after.',
+  },
+  {
+    name: 'The Downwind Run',
+    tagline: 'Intermediate+',
+    icon: '💨',
+    price: '€150',
+    duration: '2–3 hrs',
+    includesList: ['Guide', 'Safety boat', 'Return transport'],
+    description:
+      'A guided downwind from Kite Play Hurghada to Makadi Bay — roughly 22–25 km on the water. Intermediate to advanced only.',
   },
 ];
 
